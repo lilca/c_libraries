@@ -6,17 +6,19 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-#include "typedefs.h"
+#include "../common/typedefs.h"
+#include "tag_data_controller.h"
 
 int main(int aArgc, char** aArgs);
-int fParseLine(const char* aBuffer, uint32 aSize);
+int fParseData(const char* aBuffer, uint64 aSize);
 
 //! 入力ファイルのデータ
 char* vBuffer;
 //! 入力ファイルのサイズ
-uint32 vFileSize = 0;
+int64 vFileSize = 0;
 
 /**
  * @fn
@@ -41,7 +43,7 @@ int main(int aArgc, char** aArgs){
   }
   vInputPath = aArgs[1];
   // Open input path
-  if( ( vIfp = fopen(vInputPath, "r") ) == NULL ){
+  if( ( vIfp = fopen(vInputPath, "rb") ) == NULL ){
     printf("ERROR: Can't open a file.(%s)\n", vInputPath);
     return -1;
   }
@@ -55,9 +57,9 @@ int main(int aArgc, char** aArgs){
   fread(vBuffer, 1, vFileSize, vIfp);
   // Parse file data
   fParseData(vBuffer, vFileSize);
+  // Terminate
   free(vBuffer);
   fclose(vIfp);
-  // Terminate
   return 0;
 }
 
@@ -71,7 +73,15 @@ int main(int aArgc, char** aArgs){
  * @sa
  * @detail データストリングをまとめて処理する
  */
-int fParseLine(const char* aBuffer, uint64 aSize){
+int fParseData(const char* aBuffer, uint64 aSize){
   /*[tir:begin] ref="#core" [tir:end]*/
+  tagDataController_init();
+  tagDataController_parse(aBuffer, aSize);
+  int len = tagDataController_getSize();
+  TAG_ITEM item;
+  for(int idx=0; idx<len; idx++){
+    item = tagDataController_get(idx);
+    printf("%s, %lld\n",tagDataController_getTagName(item.nameId), item.length);
+  }
   return 0;
 }

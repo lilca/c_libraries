@@ -1,22 +1,20 @@
 /**
- * @file generic_file_buffer.c
- * @brief 汎用のファイルバッファ
+ * @file generic_file_reader.c
+ * @brief 汎用のファイルリーダー
  * @author lilca
- * @date 2017/1/20
+ * @date 2016/10/24
  */
 
 #include <stdio.h>
 #include <string.h>
 
-#include "typedefs.h"
+/** @def
+ * 汎用のバッファサイズ
+ */
+#define BUF_SIZE 256
 
 int main(int aArgc, char** aArgs);
-int fParseLine(const char* aBuffer, uint32 aSize);
-
-//! 入力ファイルのデータ
-char* vBuffer;
-//! 入力ファイルのサイズ
-uint32 vFileSize = 0;
+int fParseLine(const char* aLine);
 
 /**
  * @fn
@@ -33,6 +31,8 @@ int main(int aArgc, char** aArgs){
   char* vInputPath;
   //! 入力ファイルのファイル変数
   FILE* vIfp;
+  //! 入力ファイルから読込れた一行
+  char vLine[BUF_SIZE];
 
   // Get input path
   if( aArgc < 2 ){
@@ -45,17 +45,10 @@ int main(int aArgc, char** aArgs){
     printf("ERROR: Can't open a file.(%s)\n", vInputPath);
     return -1;
   }
-  // Get file size
-  fseek(vIfp, 0, SEEK_END);
-  fgetpos(vIfp, &vFileSize);
-  fseek(vIfp, 0, SEEK_SET);
-  // Allocate memory
-  vBuffer = malloc(vFileSize);
-  // Read file data
-  fread(vBuffer, 1, vFileSize, vIfp);
-  // Parse file data
-  fParseData(vBuffer, vFileSize);
-  free(vBuffer);
+  // Read lines
+  while( fgets(vLine, BUF_SIZE, vIfp) != NULL ){
+    fParseLine(vLine);
+  }
   fclose(vIfp);
   // Terminate
   return 0;
@@ -63,15 +56,14 @@ int main(int aArgc, char** aArgs){
 
 /**
  * @fn
- * データストリングをまとめて処理する
- * @brief データストリングをまとめて処理する
- * @param (aBuffer) データポインタ
- * @param (aSize) データ長
+ * 一行ごとの処理を実行
+ * @brief 一行ごとの処理を実行
+ * @param (aLine) 一行のテキストデータ
  * @return 0:正常終了、Other:異常終了
  * @sa
- * @detail データストリングをまとめて処理する
+ * @detail 一行ごとの処理を実行
  */
-int fParseLine(const char* aBuffer, uint64 aSize){
-  /*[tir:begin] ref="#core" [tir:end]*/
+int fParseLine(const char* aLine){
+  printf("%s",aLine);
   return 0;
 }

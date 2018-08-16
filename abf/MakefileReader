@@ -1,0 +1,14 @@
+# Makefile
+
+# Macro
+PD_NAME = tagDataControllerReader
+OBJ_LIST = tag_data_controller_reader.o tag_data_controller.o
+GCC_OPTION = -Wall
+
+#
+debug: $(OBJ_LIST)
+	gcc $(GCC_OPTION) $(OBJ_LIST) -o $(PD_NAME)
+tag_data_controller_reader.o: tag_data_controller_reader.c
+	gcc $(GCC_OPTION) -c tag_data_controller_reader.c
+tag_data_controller.o: tag_data_controller.c tag_data_controller.h
+	gcc $(GCC_OPTION) -c tag_data_controller.c
