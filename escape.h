@@ -18,7 +18,13 @@
 #define down_cur (n) (printf("\x1b[%1dB",n))
 #define right_cur (n) (printf("\x1b[%1dC",n))
 #define left_cur (n) (printf("\x1b[%1dD",n))
-#define goto_cur (x,y) (printf("\x1b[%1d;%1dH",y,x))
+#define down_first_cur (n) (printf("\x1b[%1dE",n))
+#define up_last_cur (n) (printf("\x1b[%1dF",n))
+#define mov_col_cur (x) (printf("\x1b[%1dG",x))
+#define move_cur (x,y) (printf("\x1b[%1d;%1dH",y,x))
+#define invisible_cur () (printf("\x1b[>5h"))
+#define visible_cur () (printf("\x1b[>5l"))
+
 [2   //画面クリア
 [K	  //カーソル位置から行末までをクリア 
 [nA  //カーソルを上にn行移動
