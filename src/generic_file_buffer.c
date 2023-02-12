@@ -1,4 +1,4 @@
-/**
+/*＊
  * @file generic_file_reader.c
  * @brief 汎用のファイルリーダー
  * @author lilca
