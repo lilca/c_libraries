@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lilca C Library: src/graphics/format/jpeg.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lilca C Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_560415a5d2bc4999842279f4fc1debef.html">graphics</a></li><li class="navelem"><a class="el" href="dir_065142dcc79b3759d2e30d0671692727.html">format</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">jpeg.c ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a27da0285cbd8198d8d14e4f9e779aa2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a27da0285cbd8198d8d14e4f9e779aa2f">JPEG_SOI</a>&#160;&#160;&#160;0xd8ff</td></tr>
+<tr class="separator:a27da0285cbd8198d8d14e4f9e779aa2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7fc8bba5774b64b49ad73236a00f99a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#ae7fc8bba5774b64b49ad73236a00f99a">JPEG_APP0</a>&#160;&#160;&#160;0xe0ff</td></tr>
+<tr class="separator:ae7fc8bba5774b64b49ad73236a00f99a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8ebba7fe93c909f3727c92f18431eb6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#aa8ebba7fe93c909f3727c92f18431eb6">JPEG_DQT</a>&#160;&#160;&#160;0xdbff</td></tr>
+<tr class="separator:aa8ebba7fe93c909f3727c92f18431eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a648c53a7dc8482ff1dc81a3160750976"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a648c53a7dc8482ff1dc81a3160750976">JPEG_SOF0</a>&#160;&#160;&#160;0xc0ff</td></tr>
+<tr class="separator:a648c53a7dc8482ff1dc81a3160750976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f020bc66c7e6c45c9cd54a870c5ba6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#ad4f020bc66c7e6c45c9cd54a870c5ba6">JPEG_DHT</a>&#160;&#160;&#160;0xc4ff</td></tr>
+<tr class="separator:ad4f020bc66c7e6c45c9cd54a870c5ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb514a82546fbb19b8fa23fe2ddd807"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a4eb514a82546fbb19b8fa23fe2ddd807">JPEG_SOS</a>&#160;&#160;&#160;0xdaff</td></tr>
+<tr class="separator:a4eb514a82546fbb19b8fa23fe2ddd807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e536534c1ef12e3f30afdec95bb642d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a2e536534c1ef12e3f30afdec95bb642d">JPEG_EOI</a>&#160;&#160;&#160;0xd9ff</td></tr>
+<tr class="separator:a2e536534c1ef12e3f30afdec95bb642d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128ee3b9516f97e97a86ea9e185b92ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a128ee3b9516f97e97a86ea9e185b92ca">JPEG_JFIF_ID</a>&#160;&#160;&#160;&quot;JFIF&quot;</td></tr>
+<tr class="separator:a128ee3b9516f97e97a86ea9e185b92ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a10d938dbacfc20ab2d91cf175e2ee17f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a10d938dbacfc20ab2d91cf175e2ee17f">parseSOI</a> (<a class="el" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *p)</td></tr>
+<tr class="separator:a10d938dbacfc20ab2d91cf175e2ee17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5c37e68a0b64fc065807ec3324072a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#ad5c37e68a0b64fc065807ec3324072a7">parseEOI</a> (<a class="el" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *p)</td></tr>
+<tr class="separator:ad5c37e68a0b64fc065807ec3324072a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c4375ba15988651b512f4543199a763"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a0c4375ba15988651b512f4543199a763">parseAPP0</a> (<a class="el" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *p)</td></tr>
+<tr class="separator:a0c4375ba15988651b512f4543199a763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00ad872fdcb812f3a1fc8bab58f4cd5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#af00ad872fdcb812f3a1fc8bab58f4cd5">parseDQT</a> (<a class="el" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *p)</td></tr>
+<tr class="separator:af00ad872fdcb812f3a1fc8bab58f4cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33e9d8b70c0cbac3243ea242a1d5611d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a33e9d8b70c0cbac3243ea242a1d5611d">parseSOF0</a> (<a class="el" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *p)</td></tr>
+<tr class="separator:a33e9d8b70c0cbac3243ea242a1d5611d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3005b2f636f2f31ea93c173fd516c1d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a3005b2f636f2f31ea93c173fd516c1d2">parseDHT</a> (<a class="el" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *p)</td></tr>
+<tr class="separator:a3005b2f636f2f31ea93c173fd516c1d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adedd6f46358e96f1399c7ef1997ec807"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#adedd6f46358e96f1399c7ef1997ec807">parseSOS</a> (<a class="el" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *p)</td></tr>
+<tr class="separator:adedd6f46358e96f1399c7ef1997ec807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="ae7fc8bba5774b64b49ad73236a00f99a" name="ae7fc8bba5774b64b49ad73236a00f99a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7fc8bba5774b64b49ad73236a00f99a">&#9670;&nbsp;</a></span>JPEG_APP0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JPEG_APP0&#160;&#160;&#160;0xe0ff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4f020bc66c7e6c45c9cd54a870c5ba6" name="ad4f020bc66c7e6c45c9cd54a870c5ba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f020bc66c7e6c45c9cd54a870c5ba6">&#9670;&nbsp;</a></span>JPEG_DHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JPEG_DHT&#160;&#160;&#160;0xc4ff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8ebba7fe93c909f3727c92f18431eb6" name="aa8ebba7fe93c909f3727c92f18431eb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8ebba7fe93c909f3727c92f18431eb6">&#9670;&nbsp;</a></span>JPEG_DQT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JPEG_DQT&#160;&#160;&#160;0xdbff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e536534c1ef12e3f30afdec95bb642d" name="a2e536534c1ef12e3f30afdec95bb642d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e536534c1ef12e3f30afdec95bb642d">&#9670;&nbsp;</a></span>JPEG_EOI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JPEG_EOI&#160;&#160;&#160;0xd9ff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a128ee3b9516f97e97a86ea9e185b92ca" name="a128ee3b9516f97e97a86ea9e185b92ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a128ee3b9516f97e97a86ea9e185b92ca">&#9670;&nbsp;</a></span>JPEG_JFIF_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JPEG_JFIF_ID&#160;&#160;&#160;&quot;JFIF&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a648c53a7dc8482ff1dc81a3160750976" name="a648c53a7dc8482ff1dc81a3160750976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a648c53a7dc8482ff1dc81a3160750976">&#9670;&nbsp;</a></span>JPEG_SOF0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JPEG_SOF0&#160;&#160;&#160;0xc0ff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27da0285cbd8198d8d14e4f9e779aa2f" name="a27da0285cbd8198d8d14e4f9e779aa2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27da0285cbd8198d8d14e4f9e779aa2f">&#9670;&nbsp;</a></span>JPEG_SOI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JPEG_SOI&#160;&#160;&#160;0xd8ff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4eb514a82546fbb19b8fa23fe2ddd807" name="a4eb514a82546fbb19b8fa23fe2ddd807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb514a82546fbb19b8fa23fe2ddd807">&#9670;&nbsp;</a></span>JPEG_SOS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JPEG_SOS&#160;&#160;&#160;0xdaff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a0c4375ba15988651b512f4543199a763" name="a0c4375ba15988651b512f4543199a763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4375ba15988651b512f4543199a763">&#9670;&nbsp;</a></span>parseAPP0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parseAPP0 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3005b2f636f2f31ea93c173fd516c1d2" name="a3005b2f636f2f31ea93c173fd516c1d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3005b2f636f2f31ea93c173fd516c1d2">&#9670;&nbsp;</a></span>parseDHT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parseDHT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af00ad872fdcb812f3a1fc8bab58f4cd5" name="af00ad872fdcb812f3a1fc8bab58f4cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00ad872fdcb812f3a1fc8bab58f4cd5">&#9670;&nbsp;</a></span>parseDQT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parseDQT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5c37e68a0b64fc065807ec3324072a7" name="ad5c37e68a0b64fc065807ec3324072a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5c37e68a0b64fc065807ec3324072a7">&#9670;&nbsp;</a></span>parseEOI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parseEOI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33e9d8b70c0cbac3243ea242a1d5611d" name="a33e9d8b70c0cbac3243ea242a1d5611d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33e9d8b70c0cbac3243ea242a1d5611d">&#9670;&nbsp;</a></span>parseSOF0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parseSOF0 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10d938dbacfc20ab2d91cf175e2ee17f" name="a10d938dbacfc20ab2d91cf175e2ee17f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10d938dbacfc20ab2d91cf175e2ee17f">&#9670;&nbsp;</a></span>parseSOI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parseSOI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adedd6f46358e96f1399c7ef1997ec807" name="adedd6f46358e96f1399c7ef1997ec807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adedd6f46358e96f1399c7ef1997ec807">&#9670;&nbsp;</a></span>parseSOS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parseSOS </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

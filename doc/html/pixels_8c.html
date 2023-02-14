@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lilca C Library: src/graphics/format/pixels.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lilca C Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_560415a5d2bc4999842279f4fc1debef.html">graphics</a></li><li class="navelem"><a class="el" href="dir_065142dcc79b3759d2e30d0671692727.html">format</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">pixels.c ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="pixels_8h_source.html">pixels.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a42d4367068f3dcb2560fad595f2b4b9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pixels_8c.html#a42d4367068f3dcb2560fad595f2b4b9f">Pixels_new</a> (void)</td></tr>
+<tr class="separator:a42d4367068f3dcb2560fad595f2b4b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e301f6a5416ea2f93b985283a01cfff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pixels_8c.html#a3e301f6a5416ea2f93b985283a01cfff">Pixels_init</a> (<a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *pix)</td></tr>
+<tr class="separator:a3e301f6a5416ea2f93b985283a01cfff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c0ec856ebd62d55e3732cbea78e0dc5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pixels_8c.html#a8c0ec856ebd62d55e3732cbea78e0dc5">Pixels_createEmptyMatrix</a> (<a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *pix, <a class="el" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> width, <a class="el" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> height, <a class="el" href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a> depth)</td></tr>
+<tr class="separator:a8c0ec856ebd62d55e3732cbea78e0dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d94db75ddd649ceb0c84bd02e103a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pixels_8c.html#ac3d94db75ddd649ceb0c84bd02e103a3">Pixels_free</a> (<a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *pix)</td></tr>
+<tr class="separator:ac3d94db75ddd649ceb0c84bd02e103a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13acc329288c9296cefeff0376341a2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pixels_8c.html#a13acc329288c9296cefeff0376341a2a">Pixels_print</a> (<a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *pix)</td></tr>
+<tr class="separator:a13acc329288c9296cefeff0376341a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a600ea269318415264d5aaf9a922de244"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pixels_8c.html#a600ea269318415264d5aaf9a922de244">Pixels_grayScale</a> (<a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *pix)</td></tr>
+<tr class="separator:a600ea269318415264d5aaf9a922de244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc83b658a289f87d2359efc2c1ee5e49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">fARGB</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pixels_8c.html#acc83b658a289f87d2359efc2c1ee5e49">Pixels_getValue</a> (<a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *pix, <a class="el" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> x, <a class="el" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> y)</td></tr>
+<tr class="separator:acc83b658a289f87d2359efc2c1ee5e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5500b74635710504a52375cd8a419c5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pixels_8c.html#ab5500b74635710504a52375cd8a419c5">Pixels_getHistogram</a> (<a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *pix, <a class="el" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> *array, <a class="el" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> *arraySize, int depth)</td></tr>
+<tr class="separator:ab5500b74635710504a52375cd8a419c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a8c0ec856ebd62d55e3732cbea78e0dc5" name="a8c0ec856ebd62d55e3732cbea78e0dc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c0ec856ebd62d55e3732cbea78e0dc5">&#9670;&nbsp;</a></span>Pixels_createEmptyMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pixels_createEmptyMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *&#160;</td>
+          <td class="paramname"><em>pix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a>&#160;</td>
+          <td class="paramname"><em>depth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3d94db75ddd649ceb0c84bd02e103a3" name="ac3d94db75ddd649ceb0c84bd02e103a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3d94db75ddd649ceb0c84bd02e103a3">&#9670;&nbsp;</a></span>Pixels_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pixels_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *&#160;</td>
+          <td class="paramname"><em>pix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5500b74635710504a52375cd8a419c5" name="ab5500b74635710504a52375cd8a419c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5500b74635710504a52375cd8a419c5">&#9670;&nbsp;</a></span>Pixels_getHistogram()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pixels_getHistogram </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *&#160;</td>
+          <td class="paramname"><em>pix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> *&#160;</td>
+          <td class="paramname"><em>arraySize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc83b658a289f87d2359efc2c1ee5e49" name="acc83b658a289f87d2359efc2c1ee5e49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc83b658a289f87d2359efc2c1ee5e49">&#9670;&nbsp;</a></span>Pixels_getValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">fARGB</a> Pixels_getValue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *&#160;</td>
+          <td class="paramname"><em>pix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a600ea269318415264d5aaf9a922de244" name="a600ea269318415264d5aaf9a922de244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a600ea269318415264d5aaf9a922de244">&#9670;&nbsp;</a></span>Pixels_grayScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pixels_grayScale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *&#160;</td>
+          <td class="paramname"><em>pix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e301f6a5416ea2f93b985283a01cfff" name="a3e301f6a5416ea2f93b985283a01cfff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e301f6a5416ea2f93b985283a01cfff">&#9670;&nbsp;</a></span>Pixels_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pixels_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *&#160;</td>
+          <td class="paramname"><em>pix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42d4367068f3dcb2560fad595f2b4b9f" name="a42d4367068f3dcb2560fad595f2b4b9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d4367068f3dcb2560fad595f2b4b9f">&#9670;&nbsp;</a></span>Pixels_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> * Pixels_new </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13acc329288c9296cefeff0376341a2a" name="a13acc329288c9296cefeff0376341a2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13acc329288c9296cefeff0376341a2a">&#9670;&nbsp;</a></span>Pixels_print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pixels_print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *&#160;</td>
+          <td class="paramname"><em>pix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

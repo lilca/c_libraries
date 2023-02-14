@@ -1,3 +1,8 @@
+/**
+ * 入出力用バッファクラスのソース
+ * @file
+ */
+
 #include "iobuffer.h"
 
 IOBuffer* IOBuffer_new(void) {
@@ -6,12 +11,19 @@ IOBuffer* IOBuffer_new(void) {
     return res;
 }
 
+/**
+ * IOBufferの初期化 ( PRIVATE )
+ * @param[in] buf 初期化するIOBuffer型ポインタ
+ * @return なし
+ * @details 特になし
+ */
 void IOBuffer_init(IOBuffer* buf) {
     buf->data = NULL;
     buf->size = 0;
     return;
 }
 
+/*
 IOBuffer* IOBuffer_alloc(uint32 size) {
     void* tmp = malloc(size + 1);
     if (tmp == NULL)
@@ -22,6 +34,7 @@ IOBuffer* IOBuffer_alloc(uint32 size) {
     res->data = tmp;
     return res;
 }
+*/
 
 IOBuffer* IOBuffer_readFile(char* path) {
     IOBuffer* buf = malloc(sizeof(IOBuffer));

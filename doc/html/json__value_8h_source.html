@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lilca C Library: src/datastruct/json/json_value.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lilca C Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1511046c5bc2549edab1aedab2ff8103.html">datastruct</a></li><li class="navelem"><a class="el" href="dir_31a65769bdccc2bbe912c00ae9ba1455.html">json</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">json_value.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="json__value_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef JSONVALUE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define JSONVALUE_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="typedefs_8h.html">common/typedefs.h</a>&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="json__common_8h.html">json_common.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="json__number_8h.html">json_number.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="json__string_8h.html">json_string.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eb">   14</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eb">_JSONValueType</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba0cb7cd1a4f2204d697525c3be75d36fc">   15</a></span>    <a class="code hl_enumvalue" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba0cb7cd1a4f2204d697525c3be75d36fc">JSON_TYPE_STRING</a>,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba80cd2e6c73b32abc8a486e1b91e55216">   16</a></span>    <a class="code hl_enumvalue" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba80cd2e6c73b32abc8a486e1b91e55216">JSON_TYPE_NUMBER</a>,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba73030bbddd376c2f0419c46b4163e52f">   17</a></span>    <a class="code hl_enumvalue" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba73030bbddd376c2f0419c46b4163e52f">JSON_TYPE_OBJECT</a>,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313ebae2225dda6821202f523743113af2cae0">   18</a></span>    <a class="code hl_enumvalue" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313ebae2225dda6821202f523743113af2cae0">JSON_TYPE_ARRAY</a>,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba63bc8e22a3ef79f91b8b642fc4cd781a">   19</a></span>    <a class="code hl_enumvalue" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba63bc8e22a3ef79f91b8b642fc4cd781a">JSON_TYPE_TRUE</a>,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313ebae776de865f57a67e04581ea8a3893016">   20</a></span>    <a class="code hl_enumvalue" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313ebae776de865f57a67e04581ea8a3893016">JSON_TYPE_FALSE</a>,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313ebaf98583d2f9fd74c45e26b6e09daf6b0c">   21</a></span>    <a class="code hl_enumvalue" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313ebaf98583d2f9fd74c45e26b6e09daf6b0c">JSON_TYPE_NULL</a>,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_enumvalue" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba7d323514cb0b9c98320187c3b6c72f26">JSON_TYPE_EMPTY</a> = -1</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba7d323514cb0b9c98320187c3b6c72f26">   23</a></span>};</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="json__value_8h.html#af61c933cfb8469ed7cd267c09cea20a6">   24</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eb">_JSONValueType</a> <a class="code hl_typedef" href="json__value_8h.html#af61c933cfb8469ed7cd267c09cea20a6">JSONValueType</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct___j_s_o_n_value.html">   26</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct___j_s_o_n_value.html">_JSONValue</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct___j_s_o_n_value.html#a04fc2b29ef22b00b4b0d9bb63dea0532">   27</a></span>    <a class="code hl_typedef" href="json__value_8h.html#af61c933cfb8469ed7cd267c09cea20a6">JSONValueType</a> <a class="code hl_variable" href="struct___j_s_o_n_value.html#a04fc2b29ef22b00b4b0d9bb63dea0532">type</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct___j_s_o_n_value.html#a9dfd40e7368506b5c27d7548ccf82bbc">   28</a></span>    <span class="keywordtype">void</span>* <a class="code hl_variable" href="struct___j_s_o_n_value.html#a9dfd40e7368506b5c27d7548ccf82bbc">val</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="json__value_8h.html#a142a4e23c851ed6829d231908338cb7b">   30</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct___j_s_o_n_value.html">_JSONValue</a> <a class="code hl_struct" href="struct___j_s_o_n_value.html">JSONValue</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><a class="code hl_struct" href="struct___j_s_o_n_value.html">JSONValue</a>* <a class="code hl_function" href="json__value_8h.html#aab47432208659f3d1a9de3536fc29071">JSONValue_new</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="json__value_8h.html#a259c1a96431f10c8ae84ba59b8c9d30f">JSONValue_init</a>(<a class="code hl_struct" href="struct___j_s_o_n_value.html">JSONValue</a>* <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> <a class="code hl_function" href="json__value_8h.html#a119192462103359e234481f09b9016ae">JSONValue_free</a>(<a class="code hl_struct" href="struct___j_s_o_n_value.html">JSONValue</a>* <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="json__value_8h.html#a946efbf0f656f2b78b2bfcc2a2050bb8">JSONValue_freeValue</a>(<a class="code hl_struct" href="struct___j_s_o_n_value.html">JSONValue</a>* <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> <a class="code hl_function" href="json__value_8h.html#a9c8fc9a68cdb57621db8feeeb2b6b2e6">JSONValue_print</a>(<a class="code hl_struct" href="struct___j_s_o_n_value.html">JSONValue</a>* <span class="keyword">this</span>, <span class="keywordtype">int</span> depth);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">int</span> <a class="code hl_function" href="json__value_8h.html#af20f0b569a19f692647fe7838946c1e7">JSONValue_parse</a>(<a class="code hl_struct" href="struct___j_s_o_n_value.html">JSONValue</a>* <span class="keyword">this</span>, <span class="keywordtype">char</span>** chr);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="ajson__common_8h_html"><div class="ttname"><a href="json__common_8h.html">json_common.h</a></div></div>
+<div class="ttc" id="ajson__number_8h_html"><div class="ttname"><a href="json__number_8h.html">json_number.h</a></div></div>
+<div class="ttc" id="ajson__string_8h_html"><div class="ttname"><a href="json__string_8h.html">json_string.h</a></div></div>
+<div class="ttc" id="ajson__value_8h_html_a119192462103359e234481f09b9016ae"><div class="ttname"><a href="json__value_8h.html#a119192462103359e234481f09b9016ae">JSONValue_free</a></div><div class="ttdeci">void JSONValue_free(JSONValue *this)</div><div class="ttdef"><b>Definition:</b> json_value.c:19</div></div>
+<div class="ttc" id="ajson__value_8h_html_a259c1a96431f10c8ae84ba59b8c9d30f"><div class="ttname"><a href="json__value_8h.html#a259c1a96431f10c8ae84ba59b8c9d30f">JSONValue_init</a></div><div class="ttdeci">void JSONValue_init(JSONValue *this)</div><div class="ttdef"><b>Definition:</b> json_value.c:13</div></div>
+<div class="ttc" id="ajson__value_8h_html_a946efbf0f656f2b78b2bfcc2a2050bb8"><div class="ttname"><a href="json__value_8h.html#a946efbf0f656f2b78b2bfcc2a2050bb8">JSONValue_freeValue</a></div><div class="ttdeci">void JSONValue_freeValue(JSONValue *this)</div><div class="ttdef"><b>Definition:</b> json_value.c:27</div></div>
+<div class="ttc" id="ajson__value_8h_html_a9c8fc9a68cdb57621db8feeeb2b6b2e6"><div class="ttname"><a href="json__value_8h.html#a9c8fc9a68cdb57621db8feeeb2b6b2e6">JSONValue_print</a></div><div class="ttdeci">void JSONValue_print(JSONValue *this, int depth)</div><div class="ttdef"><b>Definition:</b> json_value.c:43</div></div>
+<div class="ttc" id="ajson__value_8h_html_aab47432208659f3d1a9de3536fc29071"><div class="ttname"><a href="json__value_8h.html#aab47432208659f3d1a9de3536fc29071">JSONValue_new</a></div><div class="ttdeci">JSONValue * JSONValue_new(void)</div><div class="ttdef"><b>Definition:</b> json_value.c:7</div></div>
+<div class="ttc" id="ajson__value_8h_html_af164a8778d65bb842dc9b3f1bb6313eb"><div class="ttname"><a href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eb">_JSONValueType</a></div><div class="ttdeci">_JSONValueType</div><div class="ttdef"><b>Definition:</b> json_value.h:14</div></div>
+<div class="ttc" id="ajson__value_8h_html_af164a8778d65bb842dc9b3f1bb6313eba0cb7cd1a4f2204d697525c3be75d36fc"><div class="ttname"><a href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba0cb7cd1a4f2204d697525c3be75d36fc">JSON_TYPE_STRING</a></div><div class="ttdeci">@ JSON_TYPE_STRING</div><div class="ttdef"><b>Definition:</b> json_value.h:15</div></div>
+<div class="ttc" id="ajson__value_8h_html_af164a8778d65bb842dc9b3f1bb6313eba63bc8e22a3ef79f91b8b642fc4cd781a"><div class="ttname"><a href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba63bc8e22a3ef79f91b8b642fc4cd781a">JSON_TYPE_TRUE</a></div><div class="ttdeci">@ JSON_TYPE_TRUE</div><div class="ttdef"><b>Definition:</b> json_value.h:19</div></div>
+<div class="ttc" id="ajson__value_8h_html_af164a8778d65bb842dc9b3f1bb6313eba73030bbddd376c2f0419c46b4163e52f"><div class="ttname"><a href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba73030bbddd376c2f0419c46b4163e52f">JSON_TYPE_OBJECT</a></div><div class="ttdeci">@ JSON_TYPE_OBJECT</div><div class="ttdef"><b>Definition:</b> json_value.h:17</div></div>
+<div class="ttc" id="ajson__value_8h_html_af164a8778d65bb842dc9b3f1bb6313eba7d323514cb0b9c98320187c3b6c72f26"><div class="ttname"><a href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba7d323514cb0b9c98320187c3b6c72f26">JSON_TYPE_EMPTY</a></div><div class="ttdeci">@ JSON_TYPE_EMPTY</div><div class="ttdef"><b>Definition:</b> json_value.h:22</div></div>
+<div class="ttc" id="ajson__value_8h_html_af164a8778d65bb842dc9b3f1bb6313eba80cd2e6c73b32abc8a486e1b91e55216"><div class="ttname"><a href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313eba80cd2e6c73b32abc8a486e1b91e55216">JSON_TYPE_NUMBER</a></div><div class="ttdeci">@ JSON_TYPE_NUMBER</div><div class="ttdef"><b>Definition:</b> json_value.h:16</div></div>
+<div class="ttc" id="ajson__value_8h_html_af164a8778d65bb842dc9b3f1bb6313ebae2225dda6821202f523743113af2cae0"><div class="ttname"><a href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313ebae2225dda6821202f523743113af2cae0">JSON_TYPE_ARRAY</a></div><div class="ttdeci">@ JSON_TYPE_ARRAY</div><div class="ttdef"><b>Definition:</b> json_value.h:18</div></div>
+<div class="ttc" id="ajson__value_8h_html_af164a8778d65bb842dc9b3f1bb6313ebae776de865f57a67e04581ea8a3893016"><div class="ttname"><a href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313ebae776de865f57a67e04581ea8a3893016">JSON_TYPE_FALSE</a></div><div class="ttdeci">@ JSON_TYPE_FALSE</div><div class="ttdef"><b>Definition:</b> json_value.h:20</div></div>
+<div class="ttc" id="ajson__value_8h_html_af164a8778d65bb842dc9b3f1bb6313ebaf98583d2f9fd74c45e26b6e09daf6b0c"><div class="ttname"><a href="json__value_8h.html#af164a8778d65bb842dc9b3f1bb6313ebaf98583d2f9fd74c45e26b6e09daf6b0c">JSON_TYPE_NULL</a></div><div class="ttdeci">@ JSON_TYPE_NULL</div><div class="ttdef"><b>Definition:</b> json_value.h:21</div></div>
+<div class="ttc" id="ajson__value_8h_html_af20f0b569a19f692647fe7838946c1e7"><div class="ttname"><a href="json__value_8h.html#af20f0b569a19f692647fe7838946c1e7">JSONValue_parse</a></div><div class="ttdeci">int JSONValue_parse(JSONValue *this, char **chr)</div><div class="ttdef"><b>Definition:</b> json_value.c:71</div></div>
+<div class="ttc" id="ajson__value_8h_html_af61c933cfb8469ed7cd267c09cea20a6"><div class="ttname"><a href="json__value_8h.html#af61c933cfb8469ed7cd267c09cea20a6">JSONValueType</a></div><div class="ttdeci">enum _JSONValueType JSONValueType</div><div class="ttdef"><b>Definition:</b> json_value.h:24</div></div>
+<div class="ttc" id="astruct___j_s_o_n_value_html"><div class="ttname"><a href="struct___j_s_o_n_value.html">_JSONValue</a></div><div class="ttdef"><b>Definition:</b> json_value.h:26</div></div>
+<div class="ttc" id="astruct___j_s_o_n_value_html_a04fc2b29ef22b00b4b0d9bb63dea0532"><div class="ttname"><a href="struct___j_s_o_n_value.html#a04fc2b29ef22b00b4b0d9bb63dea0532">_JSONValue::type</a></div><div class="ttdeci">JSONValueType type</div><div class="ttdef"><b>Definition:</b> json_value.h:27</div></div>
+<div class="ttc" id="astruct___j_s_o_n_value_html_a9dfd40e7368506b5c27d7548ccf82bbc"><div class="ttname"><a href="struct___j_s_o_n_value.html#a9dfd40e7368506b5c27d7548ccf82bbc">_JSONValue::val</a></div><div class="ttdeci">void * val</div><div class="ttdef"><b>Definition:</b> json_value.h:28</div></div>
+<div class="ttc" id="atypedefs_8h_html"><div class="ttname"><a href="typedefs_8h.html">typedefs.h</a></div><div class="ttdoc">共用変数＆定数の定義</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

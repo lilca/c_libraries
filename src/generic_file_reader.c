@@ -1,8 +1,6 @@
 /**
- * @file generic_file_buffer.c
- * @brief 汎用のファイルバッファ
- * @author lilca
- * @date 2017/1/20
+ * 汎用のファイル一括読み込み
+ * @file
  */
 
 #include <stdio.h>
@@ -11,7 +9,7 @@
 #include "typedefs.h"
 
 int main(int aArgc, char** aArgs);
-int fParseLine(const char* aBuffer, uint32 aSize);
+int fParseLine(const char* aBuffer, uint64 aSize);
 
 //! 入力ファイルのデータ
 char* vBuffer;
@@ -19,19 +17,16 @@ char* vBuffer;
 uint32 vFileSize = 0;
 
 /**
- * @fn
  * メイン関数
- * @brief メイン関数
- * @param (aArgc) コマンドラインからの引数の数
- * @param (aArgs) コマンドラインからの引数の文字列リスト
+ * @param[in] aArgc コマンドラインからの引数の数
+ * @param[in] aArgs コマンドラインからの引数の文字列リスト
  * @return 0:正常終了、Other:異常終了
- * @sa
- * @detail メイン関数
+ * @details 特になし
  */
 int main(int aArgc, char** aArgs){
-  //! 入力ファイルのパス
+  // 入力ファイルのパス
   char* vInputPath;
-  //! 入力ファイルのファイル変数
+  // 入力ファイルのファイル変数
   FILE* vIfp;
 
   // Get input path
@@ -62,14 +57,11 @@ int main(int aArgc, char** aArgs){
 }
 
 /**
- * @fn
  * データストリングをまとめて処理する
- * @brief データストリングをまとめて処理する
  * @param (aBuffer) データポインタ
  * @param (aSize) データ長
  * @return 0:正常終了、Other:異常終了
- * @sa
- * @detail データストリングをまとめて処理する
+ * @details 詳細：データストリングをまとめて処理する
  */
 int fParseLine(const char* aBuffer, uint64 aSize){
   /*[tir:begin] ref="#core" [tir:end]*/

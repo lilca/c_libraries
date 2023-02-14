@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lilca C Library: src/abf/tag_data_controller.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lilca C Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_662bda4cdc66e336109fab17e0ec7383.html">abf</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">tag_data_controller.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="typedefs_8h_source.html">../common/typedefs.h</a>&quot;</code><br />
+</div>
+<p><a href="tag__data__controller_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_a_g___i_t_e_m.html">TAG_ITEM</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a8fe83ac76edc595f6b98cd4a4127aed5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tag__data__controller_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5">ERROR</a>&#160;&#160;&#160;-1</td></tr>
+<tr class="separator:a8fe83ac76edc595f6b98cd4a4127aed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1291f416b069313021b519eea62d5bf1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tag__data__controller_8h.html#a1291f416b069313021b519eea62d5bf1">NORMAL</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a1291f416b069313021b519eea62d5bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4436263fa901d33c9cfc39cb10a183b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tag__data__controller_8h.html#a4436263fa901d33c9cfc39cb10a183b9">MAX_TAG_LIST_SIZE</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a4436263fa901d33c9cfc39cb10a183b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ad1227fe94cc74b830acd2448c923fa73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="typedefs_8h.html#ae47c588f3ab8c61121c1c7ab7edc47cd">int8</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tag__data__controller_8h.html#ad1227fe94cc74b830acd2448c923fa73">tagDataController_getTagName</a> (<a class="el" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> id)</td></tr>
+<tr class="separator:ad1227fe94cc74b830acd2448c923fa73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65a57349eb58614a15d17f31e8c03054"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tag__data__controller_8h.html#a65a57349eb58614a15d17f31e8c03054">tagDataController_init</a> ()</td></tr>
+<tr class="separator:a65a57349eb58614a15d17f31e8c03054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a992ab7d70601c98a5723345c765da703"><td class="memItemLeft" align="right" valign="top"><a class="el" href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tag__data__controller_8h.html#a992ab7d70601c98a5723345c765da703">tagDataController_getSize</a> ()</td></tr>
+<tr class="separator:a992ab7d70601c98a5723345c765da703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b063ef97861e9de51a3ea76d6fad80a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tag__data__controller_8h.html#a1b063ef97861e9de51a3ea76d6fad80a">tagDataController_put</a> (<a class="el" href="struct_t_a_g___i_t_e_m.html">TAG_ITEM</a> item)</td></tr>
+<tr class="separator:a1b063ef97861e9de51a3ea76d6fad80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2696b55268a78821655e86bc8c5640"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_t_a_g___i_t_e_m.html">TAG_ITEM</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tag__data__controller_8h.html#aec2696b55268a78821655e86bc8c5640">tagDataController_get</a> (<a class="el" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> index)</td></tr>
+<tr class="separator:aec2696b55268a78821655e86bc8c5640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd52c866badb40e0ebc9903c6ea11b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tag__data__controller_8h.html#addd52c866badb40e0ebc9903c6ea11b7">tagDataController_parse</a> (const <a class="el" href="typedefs_8h.html#ae47c588f3ab8c61121c1c7ab7edc47cd">int8</a> *ptr, <a class="el" href="typedefs_8h.html#a2834615d491c11fba337095447f25886">uint64</a> length)</td></tr>
+<tr class="separator:addd52c866badb40e0ebc9903c6ea11b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c0917025a7b172c677ecbf08a8ab4f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tag__data__controller_8h.html#a8c0917025a7b172c677ecbf08a8ab4f9">tagDataController_fwrite</a> (FILE *fp)</td></tr>
+<tr class="separator:a8c0917025a7b172c677ecbf08a8ab4f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a8fe83ac76edc595f6b98cd4a4127aed5" name="a8fe83ac76edc595f6b98cd4a4127aed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fe83ac76edc595f6b98cd4a4127aed5">&#9670;&nbsp;</a></span>ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR&#160;&#160;&#160;-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4436263fa901d33c9cfc39cb10a183b9" name="a4436263fa901d33c9cfc39cb10a183b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4436263fa901d33c9cfc39cb10a183b9">&#9670;&nbsp;</a></span>MAX_TAG_LIST_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_TAG_LIST_SIZE&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1291f416b069313021b519eea62d5bf1" name="a1291f416b069313021b519eea62d5bf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1291f416b069313021b519eea62d5bf1">&#9670;&nbsp;</a></span>NORMAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NORMAL&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a8c0917025a7b172c677ecbf08a8ab4f9" name="a8c0917025a7b172c677ecbf08a8ab4f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c0917025a7b172c677ecbf08a8ab4f9">&#9670;&nbsp;</a></span>tagDataController_fwrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> tagDataController_fwrite </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec2696b55268a78821655e86bc8c5640" name="aec2696b55268a78821655e86bc8c5640"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2696b55268a78821655e86bc8c5640">&#9670;&nbsp;</a></span>tagDataController_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_t_a_g___i_t_e_m.html">TAG_ITEM</a> tagDataController_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a992ab7d70601c98a5723345c765da703" name="a992ab7d70601c98a5723345c765da703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a992ab7d70601c98a5723345c765da703">&#9670;&nbsp;</a></span>tagDataController_getSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a> tagDataController_getSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1227fe94cc74b830acd2448c923fa73" name="ad1227fe94cc74b830acd2448c923fa73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1227fe94cc74b830acd2448c923fa73">&#9670;&nbsp;</a></span>tagDataController_getTagName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typedefs_8h.html#ae47c588f3ab8c61121c1c7ab7edc47cd">int8</a> * tagDataController_getTagName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65a57349eb58614a15d17f31e8c03054" name="a65a57349eb58614a15d17f31e8c03054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65a57349eb58614a15d17f31e8c03054">&#9670;&nbsp;</a></span>tagDataController_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tagDataController_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addd52c866badb40e0ebc9903c6ea11b7" name="addd52c866badb40e0ebc9903c6ea11b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd52c866badb40e0ebc9903c6ea11b7">&#9670;&nbsp;</a></span>tagDataController_parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> tagDataController_parse </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="typedefs_8h.html#ae47c588f3ab8c61121c1c7ab7edc47cd">int8</a> *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="typedefs_8h.html#a2834615d491c11fba337095447f25886">uint64</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b063ef97861e9de51a3ea76d6fad80a" name="a1b063ef97861e9de51a3ea76d6fad80a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b063ef97861e9de51a3ea76d6fad80a">&#9670;&nbsp;</a></span>tagDataController_put()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> tagDataController_put </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_a_g___i_t_e_m.html">TAG_ITEM</a>&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

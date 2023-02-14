@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lilca C Library: src/escape.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lilca C Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a>  </div>
+  <div class="headertitle"><div class="title">escape.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="escape_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a4af1b6159e447ba72652bb7fcdfa726e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a4af1b6159e447ba72652bb7fcdfa726e">ESC</a>&#160;&#160;&#160;&quot;\x1b[&quot;</td></tr>
+<tr class="separator:a4af1b6159e447ba72652bb7fcdfa726e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfec9ea8509e072af0e2aafbfdc718d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#acfec9ea8509e072af0e2aafbfdc718d9">ESC_BLACK</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:acfec9ea8509e072af0e2aafbfdc718d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c053f01ace5aafade2bca8a1727b522"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a5c053f01ace5aafade2bca8a1727b522">ESC_RED</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a5c053f01ace5aafade2bca8a1727b522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0d6b2906ea4e2b5179baa95a9ba7653"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#aa0d6b2906ea4e2b5179baa95a9ba7653">ESC_GREEN</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:aa0d6b2906ea4e2b5179baa95a9ba7653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe055efc13db8cf90b0f7cb27bc0862"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#acbe055efc13db8cf90b0f7cb27bc0862">ESC_YELLOW</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:acbe055efc13db8cf90b0f7cb27bc0862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad116b147d5108d2ec10e77939f35462d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#ad116b147d5108d2ec10e77939f35462d">ESC_BLUE</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ad116b147d5108d2ec10e77939f35462d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adac63839c22276e5973a1085ed5216b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#adac63839c22276e5973a1085ed5216b6">ESC_MZENDA</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:adac63839c22276e5973a1085ed5216b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d9b2328e4182c9302e309dfe02c7ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a49d9b2328e4182c9302e309dfe02c7ff">ESC_CYAN</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:a49d9b2328e4182c9302e309dfe02c7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ec58b2f36a753832366a52607e6dbae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a7ec58b2f36a753832366a52607e6dbae">ESC_WHITE</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:a7ec58b2f36a753832366a52607e6dbae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75605521a3b07d249156853653d03492"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a75605521a3b07d249156853653d03492">ESC_STDCLR</a>&#160;&#160;&#160;9</td></tr>
+<tr class="separator:a75605521a3b07d249156853653d03492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d2aec5022ff9ffc186d0ce04cad40eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a5d2aec5022ff9ffc186d0ce04cad40eb">clear_screen</a>&#160;&#160;&#160;() (printf(&quot;\x1b[2&quot;))</td></tr>
+<tr class="separator:a5d2aec5022ff9ffc186d0ce04cad40eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2824b5533496a38e970d7d3bfd7e94d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#aa2824b5533496a38e970d7d3bfd7e94d">clear_cur2end</a>&#160;&#160;&#160;() (printf(&quot;\x1b[K&quot;))</td></tr>
+<tr class="separator:aa2824b5533496a38e970d7d3bfd7e94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7dbf9309ddf3f4794550c9371e83e5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#af7dbf9309ddf3f4794550c9371e83e5c">up_cur</a>&#160;&#160;&#160;(n) (printf(&quot;\x1b[%1dA&quot;,n))</td></tr>
+<tr class="separator:af7dbf9309ddf3f4794550c9371e83e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70749bbf2839f28b859f5faac9bb6fa6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a70749bbf2839f28b859f5faac9bb6fa6">down_cur</a>&#160;&#160;&#160;(n) (printf(&quot;\x1b[%1dB&quot;,n))</td></tr>
+<tr class="separator:a70749bbf2839f28b859f5faac9bb6fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c3bfde23dc8f652a5a8f287eb700c83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a0c3bfde23dc8f652a5a8f287eb700c83">right_cur</a>&#160;&#160;&#160;(n) (printf(&quot;\x1b[%1dC&quot;,n))</td></tr>
+<tr class="separator:a0c3bfde23dc8f652a5a8f287eb700c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57fce4aafb81ac291e664fbe2c6aee1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a57fce4aafb81ac291e664fbe2c6aee1d">left_cur</a>&#160;&#160;&#160;(n) (printf(&quot;\x1b[%1dD&quot;,n))</td></tr>
+<tr class="separator:a57fce4aafb81ac291e664fbe2c6aee1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51a136c78b1cccd09245c9cfc7a00fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#ad51a136c78b1cccd09245c9cfc7a00fc">down_first_cur</a>&#160;&#160;&#160;(n) (printf(&quot;\x1b[%1dE&quot;,n))</td></tr>
+<tr class="separator:ad51a136c78b1cccd09245c9cfc7a00fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50c2a6f9e3a9cb5bdf3ff3ca811cd5f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a50c2a6f9e3a9cb5bdf3ff3ca811cd5f5">up_last_cur</a>&#160;&#160;&#160;(n) (printf(&quot;\x1b[%1dF&quot;,n))</td></tr>
+<tr class="separator:a50c2a6f9e3a9cb5bdf3ff3ca811cd5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a639582e031c25ab3795057374323dc20"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a639582e031c25ab3795057374323dc20">mov_col_cur</a>&#160;&#160;&#160;(x) (printf(&quot;\x1b[%1dG&quot;,x))</td></tr>
+<tr class="separator:a639582e031c25ab3795057374323dc20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae081b00e8478f15603514ea8db989fe1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#ae081b00e8478f15603514ea8db989fe1">move_cur</a>&#160;&#160;&#160;(x,y) (printf(&quot;\x1b[%1d;%1dH&quot;,y,x))</td></tr>
+<tr class="separator:ae081b00e8478f15603514ea8db989fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaa8fcb56ff69f3d7b7d225548b3f58c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#adaa8fcb56ff69f3d7b7d225548b3f58c">invisible_cur</a>&#160;&#160;&#160;() (printf(&quot;\x1b[&gt;5h&quot;))</td></tr>
+<tr class="separator:adaa8fcb56ff69f3d7b7d225548b3f58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eaded61cd2729419e1547ef4b73e5a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a5eaded61cd2729419e1547ef4b73e5a6">visible_cur</a>&#160;&#160;&#160;() (printf(&quot;\x1b[&gt;5l&quot;))</td></tr>
+<tr class="separator:a5eaded61cd2729419e1547ef4b73e5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb87d38431dd2caee5798c5895a8689d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#adb87d38431dd2caee5798c5895a8689d">clear_attr</a>&#160;&#160;&#160;() (printf(&quot;\x1b[0m&quot;))</td></tr>
+<tr class="separator:adb87d38431dd2caee5798c5895a8689d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e4e953483959fc366f7e25140d9701"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a44e4e953483959fc366f7e25140d9701">strong_attr</a>&#160;&#160;&#160;() (printf(&quot;\x1b[1m&quot;))</td></tr>
+<tr class="separator:a44e4e953483959fc366f7e25140d9701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a131c264650cee6f196cc1d93acb61527"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a131c264650cee6f196cc1d93acb61527">underline_attr</a>&#160;&#160;&#160;() (printf(&quot;\x1b[4m&quot;))</td></tr>
+<tr class="separator:a131c264650cee6f196cc1d93acb61527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0cafc08aa32adebb99571d9670ec4d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#ac0cafc08aa32adebb99571d9670ec4d2">rever_attr</a>&#160;&#160;&#160;() (printf(&quot;\x1b[7m&quot;))</td></tr>
+<tr class="separator:ac0cafc08aa32adebb99571d9670ec4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a2b0fec86ea0d73d22a9ad6b4ccf6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#aa6a2b0fec86ea0d73d22a9ad6b4ccf6d">fcolor_attr</a>&#160;&#160;&#160;(c) (printf(&quot;\x1b[3%1dm&quot;,c))</td></tr>
+<tr class="separator:aa6a2b0fec86ea0d73d22a9ad6b4ccf6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a377b836ded9b4c9cc395afdfadc94df2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escape_8h.html#a377b836ded9b4c9cc395afdfadc94df2">bcolor_attr</a>&#160;&#160;&#160;(c) (printf(&quot;\x1b[4%1dm&quot;,c))</td></tr>
+<tr class="separator:a377b836ded9b4c9cc395afdfadc94df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a377b836ded9b4c9cc395afdfadc94df2" name="a377b836ded9b4c9cc395afdfadc94df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a377b836ded9b4c9cc395afdfadc94df2">&#9670;&nbsp;</a></span>bcolor_attr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define bcolor_attr&#160;&#160;&#160;(c) (printf(&quot;\x1b[4%1dm&quot;,c))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb87d38431dd2caee5798c5895a8689d" name="adb87d38431dd2caee5798c5895a8689d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb87d38431dd2caee5798c5895a8689d">&#9670;&nbsp;</a></span>clear_attr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define clear_attr&#160;&#160;&#160;() (printf(&quot;\x1b[0m&quot;))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2824b5533496a38e970d7d3bfd7e94d" name="aa2824b5533496a38e970d7d3bfd7e94d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2824b5533496a38e970d7d3bfd7e94d">&#9670;&nbsp;</a></span>clear_cur2end</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define clear_cur2end&#160;&#160;&#160;() (printf(&quot;\x1b[K&quot;))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d2aec5022ff9ffc186d0ce04cad40eb" name="a5d2aec5022ff9ffc186d0ce04cad40eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d2aec5022ff9ffc186d0ce04cad40eb">&#9670;&nbsp;</a></span>clear_screen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define clear_screen&#160;&#160;&#160;() (printf(&quot;\x1b[2&quot;))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70749bbf2839f28b859f5faac9bb6fa6" name="a70749bbf2839f28b859f5faac9bb6fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70749bbf2839f28b859f5faac9bb6fa6">&#9670;&nbsp;</a></span>down_cur</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define down_cur&#160;&#160;&#160;(n) (printf(&quot;\x1b[%1dB&quot;,n))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad51a136c78b1cccd09245c9cfc7a00fc" name="ad51a136c78b1cccd09245c9cfc7a00fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad51a136c78b1cccd09245c9cfc7a00fc">&#9670;&nbsp;</a></span>down_first_cur</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define down_first_cur&#160;&#160;&#160;(n) (printf(&quot;\x1b[%1dE&quot;,n))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4af1b6159e447ba72652bb7fcdfa726e" name="a4af1b6159e447ba72652bb7fcdfa726e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4af1b6159e447ba72652bb7fcdfa726e">&#9670;&nbsp;</a></span>ESC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESC&#160;&#160;&#160;&quot;\x1b[&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfec9ea8509e072af0e2aafbfdc718d9" name="acfec9ea8509e072af0e2aafbfdc718d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfec9ea8509e072af0e2aafbfdc718d9">&#9670;&nbsp;</a></span>ESC_BLACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESC_BLACK&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad116b147d5108d2ec10e77939f35462d" name="ad116b147d5108d2ec10e77939f35462d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad116b147d5108d2ec10e77939f35462d">&#9670;&nbsp;</a></span>ESC_BLUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESC_BLUE&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49d9b2328e4182c9302e309dfe02c7ff" name="a49d9b2328e4182c9302e309dfe02c7ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d9b2328e4182c9302e309dfe02c7ff">&#9670;&nbsp;</a></span>ESC_CYAN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESC_CYAN&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0d6b2906ea4e2b5179baa95a9ba7653" name="aa0d6b2906ea4e2b5179baa95a9ba7653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0d6b2906ea4e2b5179baa95a9ba7653">&#9670;&nbsp;</a></span>ESC_GREEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESC_GREEN&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adac63839c22276e5973a1085ed5216b6" name="adac63839c22276e5973a1085ed5216b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adac63839c22276e5973a1085ed5216b6">&#9670;&nbsp;</a></span>ESC_MZENDA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESC_MZENDA&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c053f01ace5aafade2bca8a1727b522" name="a5c053f01ace5aafade2bca8a1727b522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c053f01ace5aafade2bca8a1727b522">&#9670;&nbsp;</a></span>ESC_RED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESC_RED&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75605521a3b07d249156853653d03492" name="a75605521a3b07d249156853653d03492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75605521a3b07d249156853653d03492">&#9670;&nbsp;</a></span>ESC_STDCLR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESC_STDCLR&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ec58b2f36a753832366a52607e6dbae" name="a7ec58b2f36a753832366a52607e6dbae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ec58b2f36a753832366a52607e6dbae">&#9670;&nbsp;</a></span>ESC_WHITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESC_WHITE&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbe055efc13db8cf90b0f7cb27bc0862" name="acbe055efc13db8cf90b0f7cb27bc0862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbe055efc13db8cf90b0f7cb27bc0862">&#9670;&nbsp;</a></span>ESC_YELLOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESC_YELLOW&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6a2b0fec86ea0d73d22a9ad6b4ccf6d" name="aa6a2b0fec86ea0d73d22a9ad6b4ccf6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6a2b0fec86ea0d73d22a9ad6b4ccf6d">&#9670;&nbsp;</a></span>fcolor_attr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define fcolor_attr&#160;&#160;&#160;(c) (printf(&quot;\x1b[3%1dm&quot;,c))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adaa8fcb56ff69f3d7b7d225548b3f58c" name="adaa8fcb56ff69f3d7b7d225548b3f58c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaa8fcb56ff69f3d7b7d225548b3f58c">&#9670;&nbsp;</a></span>invisible_cur</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define invisible_cur&#160;&#160;&#160;() (printf(&quot;\x1b[&gt;5h&quot;))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57fce4aafb81ac291e664fbe2c6aee1d" name="a57fce4aafb81ac291e664fbe2c6aee1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57fce4aafb81ac291e664fbe2c6aee1d">&#9670;&nbsp;</a></span>left_cur</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define left_cur&#160;&#160;&#160;(n) (printf(&quot;\x1b[%1dD&quot;,n))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a639582e031c25ab3795057374323dc20" name="a639582e031c25ab3795057374323dc20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a639582e031c25ab3795057374323dc20">&#9670;&nbsp;</a></span>mov_col_cur</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define mov_col_cur&#160;&#160;&#160;(x) (printf(&quot;\x1b[%1dG&quot;,x))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae081b00e8478f15603514ea8db989fe1" name="ae081b00e8478f15603514ea8db989fe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae081b00e8478f15603514ea8db989fe1">&#9670;&nbsp;</a></span>move_cur</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define move_cur&#160;&#160;&#160;(x,y) (printf(&quot;\x1b[%1d;%1dH&quot;,y,x))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0cafc08aa32adebb99571d9670ec4d2" name="ac0cafc08aa32adebb99571d9670ec4d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0cafc08aa32adebb99571d9670ec4d2">&#9670;&nbsp;</a></span>rever_attr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rever_attr&#160;&#160;&#160;() (printf(&quot;\x1b[7m&quot;))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c3bfde23dc8f652a5a8f287eb700c83" name="a0c3bfde23dc8f652a5a8f287eb700c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c3bfde23dc8f652a5a8f287eb700c83">&#9670;&nbsp;</a></span>right_cur</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define right_cur&#160;&#160;&#160;(n) (printf(&quot;\x1b[%1dC&quot;,n))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44e4e953483959fc366f7e25140d9701" name="a44e4e953483959fc366f7e25140d9701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44e4e953483959fc366f7e25140d9701">&#9670;&nbsp;</a></span>strong_attr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define strong_attr&#160;&#160;&#160;() (printf(&quot;\x1b[1m&quot;))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a131c264650cee6f196cc1d93acb61527" name="a131c264650cee6f196cc1d93acb61527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a131c264650cee6f196cc1d93acb61527">&#9670;&nbsp;</a></span>underline_attr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define underline_attr&#160;&#160;&#160;() (printf(&quot;\x1b[4m&quot;))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7dbf9309ddf3f4794550c9371e83e5c" name="af7dbf9309ddf3f4794550c9371e83e5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7dbf9309ddf3f4794550c9371e83e5c">&#9670;&nbsp;</a></span>up_cur</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define up_cur&#160;&#160;&#160;(n) (printf(&quot;\x1b[%1dA&quot;,n))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50c2a6f9e3a9cb5bdf3ff3ca811cd5f5" name="a50c2a6f9e3a9cb5bdf3ff3ca811cd5f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50c2a6f9e3a9cb5bdf3ff3ca811cd5f5">&#9670;&nbsp;</a></span>up_last_cur</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define up_last_cur&#160;&#160;&#160;(n) (printf(&quot;\x1b[%1dF&quot;,n))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5eaded61cd2729419e1547ef4b73e5a6" name="a5eaded61cd2729419e1547ef4b73e5a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eaded61cd2729419e1547ef4b73e5a6">&#9670;&nbsp;</a></span>visible_cur</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define visible_cur&#160;&#160;&#160;() (printf(&quot;\x1b[&gt;5l&quot;))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

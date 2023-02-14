@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lilca C Library: src/datastruct/json/json_string.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lilca C Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1511046c5bc2549edab1aedab2ff8103.html">datastruct</a></li><li class="navelem"><a class="el" href="dir_31a65769bdccc2bbe912c00ae9ba1455.html">json</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">json_string.c ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="json__string_8h_source.html">json_string.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a63ab1e41f5a1562d7d6ef35675897410"><td class="memItemLeft" align="right" valign="top"><a class="el" href="json__string_8h.html#a847f1dc2745640f37f996f59653089ea">JSONString</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__string_8c.html#a63ab1e41f5a1562d7d6ef35675897410">JSONString_new</a> (void)</td></tr>
+<tr class="separator:a63ab1e41f5a1562d7d6ef35675897410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab95c17c103b76225c41ba5799a7da5e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__string_8c.html#ab95c17c103b76225c41ba5799a7da5e9">JSONString_init</a> (<a class="el" href="json__string_8h.html#a847f1dc2745640f37f996f59653089ea">JSONString</a> *this)</td></tr>
+<tr class="separator:ab95c17c103b76225c41ba5799a7da5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a582fc084695c9adebdfd3c4486142910"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__string_8c.html#a582fc084695c9adebdfd3c4486142910">JSONString_free</a> (<a class="el" href="json__string_8h.html#a847f1dc2745640f37f996f59653089ea">JSONString</a> *this)</td></tr>
+<tr class="separator:a582fc084695c9adebdfd3c4486142910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a665c7aa7ea53372ffc9652d095405637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__string_8c.html#a665c7aa7ea53372ffc9652d095405637">JSONString_freeString</a> (<a class="el" href="json__string_8h.html#a847f1dc2745640f37f996f59653089ea">JSONString</a> *this)</td></tr>
+<tr class="separator:a665c7aa7ea53372ffc9652d095405637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee2218334f7348b4c726d7e05464aadb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__string_8c.html#aee2218334f7348b4c726d7e05464aadb">JSONString_print</a> (<a class="el" href="json__string_8h.html#a847f1dc2745640f37f996f59653089ea">JSONString</a> *this, int depth)</td></tr>
+<tr class="separator:aee2218334f7348b4c726d7e05464aadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae419bb6c24a412910c8d141505c9d39d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__string_8c.html#ae419bb6c24a412910c8d141505c9d39d">JSONString_parse</a> (<a class="el" href="json__string_8h.html#a847f1dc2745640f37f996f59653089ea">JSONString</a> *this, char **chr)</td></tr>
+<tr class="separator:ae419bb6c24a412910c8d141505c9d39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a582fc084695c9adebdfd3c4486142910" name="a582fc084695c9adebdfd3c4486142910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a582fc084695c9adebdfd3c4486142910">&#9670;&nbsp;</a></span>JSONString_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JSONString_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="json__string_8h.html#a847f1dc2745640f37f996f59653089ea">JSONString</a> *&#160;</td>
+          <td class="paramname"><em>this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a665c7aa7ea53372ffc9652d095405637" name="a665c7aa7ea53372ffc9652d095405637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a665c7aa7ea53372ffc9652d095405637">&#9670;&nbsp;</a></span>JSONString_freeString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JSONString_freeString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="json__string_8h.html#a847f1dc2745640f37f996f59653089ea">JSONString</a> *&#160;</td>
+          <td class="paramname"><em>this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab95c17c103b76225c41ba5799a7da5e9" name="ab95c17c103b76225c41ba5799a7da5e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab95c17c103b76225c41ba5799a7da5e9">&#9670;&nbsp;</a></span>JSONString_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JSONString_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="json__string_8h.html#a847f1dc2745640f37f996f59653089ea">JSONString</a> *&#160;</td>
+          <td class="paramname"><em>this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63ab1e41f5a1562d7d6ef35675897410" name="a63ab1e41f5a1562d7d6ef35675897410"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63ab1e41f5a1562d7d6ef35675897410">&#9670;&nbsp;</a></span>JSONString_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="json__string_8h.html#a847f1dc2745640f37f996f59653089ea">JSONString</a> * JSONString_new </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae419bb6c24a412910c8d141505c9d39d" name="ae419bb6c24a412910c8d141505c9d39d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae419bb6c24a412910c8d141505c9d39d">&#9670;&nbsp;</a></span>JSONString_parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int JSONString_parse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="json__string_8h.html#a847f1dc2745640f37f996f59653089ea">JSONString</a> *&#160;</td>
+          <td class="paramname"><em>this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>chr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee2218334f7348b4c726d7e05464aadb" name="aee2218334f7348b4c726d7e05464aadb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee2218334f7348b4c726d7e05464aadb">&#9670;&nbsp;</a></span>JSONString_print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JSONString_print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="json__string_8h.html#a847f1dc2745640f37f996f59653089ea">JSONString</a> *&#160;</td>
+          <td class="paramname"><em>this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

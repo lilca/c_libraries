@@ -1,8 +1,6 @@
-/*＊
- * @file generic_file_reader.c
- * @brief 汎用のファイルリーダー
- * @author lilca
- * @date 2016/10/24
+/**
+ * 汎用のファイル行単位読み込み
+ * @file
  */
 
 #include <stdio.h>
@@ -17,13 +15,12 @@ int main(int aArgc, char** aArgs);
 int fParseLine(const char* aLine);
 
 /**
- * @fn
  * メイン関数
  * @brief メイン関数
- * @param (aArgc) コマンドラインからの引数の数
- * @param (aArgs) コマンドラインからの引数の文字列リスト
+ * @param [aArgc] コマンドラインからの引数の数
+ * @param [aArgs] コマンドラインからの引数の文字列リスト
  * @return 0:正常終了、Other:異常終了
- * @sa
+ * @sa 特になし
  * @detail メイン関数
  */
 int main(int aArgc, char** aArgs){

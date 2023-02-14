@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lilca C Library: src/graphics/format/units.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lilca C Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_560415a5d2bc4999842279f4fc1debef.html">graphics</a></li><li class="navelem"><a class="el" href="dir_065142dcc79b3759d2e30d0671692727.html">format</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">units.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="units_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="units_8h.html#a2054f16e6feb0ba18789c8c9d5f8b956">    1</a></span><span class="preprocessor">#ifndef GRAPHICS_FORMAT_UNITS</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define GRAPHICS_FORMAT_UNITS</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="typedefs_8h.html">common/typedefs.h</a>&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">struct </span><a class="code hl_function" href="units_8h.html#a2054f16e6feb0ba18789c8c9d5f8b956">__attribute__</a> ((__packed__)) _fARGB {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_typedef" href="typedefs_8h.html#a232fad1b0d6dcc7c16aabde98b2e2a80">float64</a> alpha;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_typedef" href="typedefs_8h.html#a232fad1b0d6dcc7c16aabde98b2e2a80">float64</a> red;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_typedef" href="typedefs_8h.html#a232fad1b0d6dcc7c16aabde98b2e2a80">float64</a> green;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_typedef" href="typedefs_8h.html#a232fad1b0d6dcc7c16aabde98b2e2a80">float64</a> blue;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>};</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">   15</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>_fARGB <a class="code hl_typedef" href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">fARGB</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">struct </span><a class="code hl_function" href="units_8h.html#a2054f16e6feb0ba18789c8c9d5f8b956">__attribute__</a> ((__packed__)) _BGRA {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_typedef" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> blue;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_typedef" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> green;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_typedef" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> red;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_typedef" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> alpha;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="units_8h.html#a5c8e801198c594000f393338a62a99a4">   23</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>_BGRA <a class="code hl_typedef" href="units_8h.html#a5c8e801198c594000f393338a62a99a4">BGRA</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">struct </span><a class="code hl_function" href="units_8h.html#a2054f16e6feb0ba18789c8c9d5f8b956">__attribute__</a> ((__packed__)) _BGR {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_typedef" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> blue;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_typedef" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> green;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_typedef" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> red;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="units_8h.html#a8563c186ed3e9d9e447def266bdca4ce">   30</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>_BGR <a class="code hl_typedef" href="units_8h.html#a8563c186ed3e9d9e447def266bdca4ce">BGR</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><a class="code hl_typedef" href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">fARGB</a>* <a class="code hl_function" href="units_8h.html#a2dc119b29405579dd7acdaed723dd225">fARGB_new</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><a class="code hl_typedef" href="units_8h.html#a5c8e801198c594000f393338a62a99a4">BGRA</a>* <a class="code hl_function" href="units_8h.html#ab36dca3f1141382dd2da31ee7e5209a1">BGRA_new</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><a class="code hl_typedef" href="units_8h.html#a8563c186ed3e9d9e447def266bdca4ce">BGR</a>* <a class="code hl_function" href="units_8h.html#aba36d02ac9228bbd339994600d5864b6">BGR_new</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="units_8h.html#a6dc7f5d37aed37ef25baf1f2bd930bba">fARGB_init</a>(<a class="code hl_typedef" href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">fARGB</a>* fargb);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> <a class="code hl_function" href="units_8h.html#aa2ea5b6ea2a8d27e63690a04b043ef10">BGRA_init</a>(<a class="code hl_typedef" href="units_8h.html#a5c8e801198c594000f393338a62a99a4">BGRA</a>* bgra);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="units_8h.html#a538ef1e6022aa1d87c0928be3ca528b6">BGR_init</a>(<a class="code hl_typedef" href="units_8h.html#a8563c186ed3e9d9e447def266bdca4ce">BGR</a>* bgr);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="units_8h.html#a98b2d7730f17d8295befd16a74c8a24a">fARGB_toGray</a>(<a class="code hl_typedef" href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">fARGB</a>* fargb);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="units_8h.html#aa9a954756b81eb7763725ebfd38cd7b1">BGRA_toGray</a>(<a class="code hl_typedef" href="units_8h.html#a5c8e801198c594000f393338a62a99a4">BGRA</a>* bgra);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="units_8h.html#a7aecfcfa086ac74175719e719c330c08">BGR_toGray</a>(<a class="code hl_typedef" href="units_8h.html#a8563c186ed3e9d9e447def266bdca4ce">BGR</a>* bgr);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="units_8h.html#a39cf9fc01d079461f9a1d347cf468685">fARGB_toBGRA</a>(<a class="code hl_typedef" href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">fARGB</a>* fargb, <a class="code hl_typedef" href="units_8h.html#a5c8e801198c594000f393338a62a99a4">BGRA</a>* bgra);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> <a class="code hl_function" href="units_8h.html#a30baf7334c61355351be60046e702857">fARGB_toBGR</a>(<a class="code hl_typedef" href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">fARGB</a>* fargb, <a class="code hl_typedef" href="units_8h.html#a8563c186ed3e9d9e447def266bdca4ce">BGR</a>* bgr);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="units_8h.html#a1c94391c4289b39c9d50315f3a647fb1">BGRA_tofARGB</a>(<a class="code hl_typedef" href="units_8h.html#a5c8e801198c594000f393338a62a99a4">BGRA</a>* bgra, <a class="code hl_typedef" href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">fARGB</a>* fargb);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="units_8h.html#ac5d0476c7efed96ce4431007b30bc085">BGRA_toBGR</a>(<a class="code hl_typedef" href="units_8h.html#a5c8e801198c594000f393338a62a99a4">BGRA</a>* bgra, <a class="code hl_typedef" href="units_8h.html#a8563c186ed3e9d9e447def266bdca4ce">BGR</a>* bgr);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="units_8h.html#ac2d6788dec7589b5a51ac71a576d369a">BGR_tofARGB</a>(<a class="code hl_typedef" href="units_8h.html#a8563c186ed3e9d9e447def266bdca4ce">BGR</a>* bgr, <a class="code hl_typedef" href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">fARGB</a>* fargb);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">void</span> <a class="code hl_function" href="units_8h.html#a99d5bcbd8cca9176db7b10f9b5487304">BGR_toBGRA</a>(<a class="code hl_typedef" href="units_8h.html#a8563c186ed3e9d9e447def266bdca4ce">BGR</a>* bgr, <a class="code hl_typedef" href="units_8h.html#a5c8e801198c594000f393338a62a99a4">BGRA</a>* bgra);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="atypedefs_8h_html"><div class="ttname"><a href="typedefs_8h.html">typedefs.h</a></div><div class="ttdoc">共用変数＆定数の定義</div></div>
+<div class="ttc" id="atypedefs_8h_html_a232fad1b0d6dcc7c16aabde98b2e2a80"><div class="ttname"><a href="typedefs_8h.html#a232fad1b0d6dcc7c16aabde98b2e2a80">float64</a></div><div class="ttdeci">double float64</div><div class="ttdoc">8バイト(64ビット)の浮動小数</div><div class="ttdef"><b>Definition:</b> typedefs.h:57</div></div>
+<div class="ttc" id="atypedefs_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdoc">1バイト(8ビット)の符号なし整数</div><div class="ttdef"><b>Definition:</b> typedefs.h:37</div></div>
+<div class="ttc" id="aunits_8h_html_a1c94391c4289b39c9d50315f3a647fb1"><div class="ttname"><a href="units_8h.html#a1c94391c4289b39c9d50315f3a647fb1">BGRA_tofARGB</a></div><div class="ttdeci">void BGRA_tofARGB(BGRA *bgra, fARGB *fargb)</div><div class="ttdef"><b>Definition:</b> units.c:102</div></div>
+<div class="ttc" id="aunits_8h_html_a2054f16e6feb0ba18789c8c9d5f8b956"><div class="ttname"><a href="units_8h.html#a2054f16e6feb0ba18789c8c9d5f8b956">__attribute__</a></div><div class="ttdeci">struct __attribute__((__packed__)) _fARGB</div><div class="ttdef"><b>Definition:</b> units.h:9</div></div>
+<div class="ttc" id="aunits_8h_html_a2dc119b29405579dd7acdaed723dd225"><div class="ttname"><a href="units_8h.html#a2dc119b29405579dd7acdaed723dd225">fARGB_new</a></div><div class="ttdeci">fARGB * fARGB_new(void)</div><div class="ttdef"><b>Definition:</b> units.c:5</div></div>
+<div class="ttc" id="aunits_8h_html_a30baf7334c61355351be60046e702857"><div class="ttname"><a href="units_8h.html#a30baf7334c61355351be60046e702857">fARGB_toBGR</a></div><div class="ttdeci">void fARGB_toBGR(fARGB *fargb, BGR *bgr)</div><div class="ttdef"><b>Definition:</b> units.c:95</div></div>
+<div class="ttc" id="aunits_8h_html_a39cf9fc01d079461f9a1d347cf468685"><div class="ttname"><a href="units_8h.html#a39cf9fc01d079461f9a1d347cf468685">fARGB_toBGRA</a></div><div class="ttdeci">void fARGB_toBGRA(fARGB *fargb, BGRA *bgra)</div><div class="ttdef"><b>Definition:</b> units.c:85</div></div>
+<div class="ttc" id="aunits_8h_html_a538ef1e6022aa1d87c0928be3ca528b6"><div class="ttname"><a href="units_8h.html#a538ef1e6022aa1d87c0928be3ca528b6">BGR_init</a></div><div class="ttdeci">void BGR_init(BGR *bgr)</div><div class="ttdef"><b>Definition:</b> units.c:43</div></div>
+<div class="ttc" id="aunits_8h_html_a5c8e801198c594000f393338a62a99a4"><div class="ttname"><a href="units_8h.html#a5c8e801198c594000f393338a62a99a4">BGRA</a></div><div class="ttdeci">struct _BGRA BGRA</div><div class="ttdef"><b>Definition:</b> units.h:23</div></div>
+<div class="ttc" id="aunits_8h_html_a6dc7f5d37aed37ef25baf1f2bd930bba"><div class="ttname"><a href="units_8h.html#a6dc7f5d37aed37ef25baf1f2bd930bba">fARGB_init</a></div><div class="ttdeci">void fARGB_init(fARGB *fargb)</div><div class="ttdef"><b>Definition:</b> units.c:23</div></div>
+<div class="ttc" id="aunits_8h_html_a7aecfcfa086ac74175719e719c330c08"><div class="ttname"><a href="units_8h.html#a7aecfcfa086ac74175719e719c330c08">BGR_toGray</a></div><div class="ttdeci">void BGR_toGray(BGR *bgr)</div><div class="ttdef"><b>Definition:</b> units.c:74</div></div>
+<div class="ttc" id="aunits_8h_html_a8563c186ed3e9d9e447def266bdca4ce"><div class="ttname"><a href="units_8h.html#a8563c186ed3e9d9e447def266bdca4ce">BGR</a></div><div class="ttdeci">struct _BGR BGR</div><div class="ttdef"><b>Definition:</b> units.h:30</div></div>
+<div class="ttc" id="aunits_8h_html_a9816d4655f732e285c7ea7fe9042109e"><div class="ttname"><a href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">fARGB</a></div><div class="ttdeci">struct _fARGB fARGB</div><div class="ttdef"><b>Definition:</b> units.h:15</div></div>
+<div class="ttc" id="aunits_8h_html_a98b2d7730f17d8295befd16a74c8a24a"><div class="ttname"><a href="units_8h.html#a98b2d7730f17d8295befd16a74c8a24a">fARGB_toGray</a></div><div class="ttdeci">void fARGB_toGray(fARGB *fargb)</div><div class="ttdef"><b>Definition:</b> units.c:52</div></div>
+<div class="ttc" id="aunits_8h_html_a99d5bcbd8cca9176db7b10f9b5487304"><div class="ttname"><a href="units_8h.html#a99d5bcbd8cca9176db7b10f9b5487304">BGR_toBGRA</a></div><div class="ttdeci">void BGR_toBGRA(BGR *bgr, BGRA *bgra)</div><div class="ttdef"><b>Definition:</b> units.c:125</div></div>
+<div class="ttc" id="aunits_8h_html_aa2ea5b6ea2a8d27e63690a04b043ef10"><div class="ttname"><a href="units_8h.html#aa2ea5b6ea2a8d27e63690a04b043ef10">BGRA_init</a></div><div class="ttdeci">void BGRA_init(BGRA *bgra)</div><div class="ttdef"><b>Definition:</b> units.c:33</div></div>
+<div class="ttc" id="aunits_8h_html_aa9a954756b81eb7763725ebfd38cd7b1"><div class="ttname"><a href="units_8h.html#aa9a954756b81eb7763725ebfd38cd7b1">BGRA_toGray</a></div><div class="ttdeci">void BGRA_toGray(BGRA *bgra)</div><div class="ttdef"><b>Definition:</b> units.c:63</div></div>
+<div class="ttc" id="aunits_8h_html_ab36dca3f1141382dd2da31ee7e5209a1"><div class="ttname"><a href="units_8h.html#ab36dca3f1141382dd2da31ee7e5209a1">BGRA_new</a></div><div class="ttdeci">BGRA * BGRA_new(void)</div><div class="ttdef"><b>Definition:</b> units.c:11</div></div>
+<div class="ttc" id="aunits_8h_html_aba36d02ac9228bbd339994600d5864b6"><div class="ttname"><a href="units_8h.html#aba36d02ac9228bbd339994600d5864b6">BGR_new</a></div><div class="ttdeci">BGR * BGR_new(void)</div><div class="ttdef"><b>Definition:</b> units.c:17</div></div>
+<div class="ttc" id="aunits_8h_html_ac2d6788dec7589b5a51ac71a576d369a"><div class="ttname"><a href="units_8h.html#ac2d6788dec7589b5a51ac71a576d369a">BGR_tofARGB</a></div><div class="ttdeci">void BGR_tofARGB(BGR *bgr, fARGB *fargb)</div><div class="ttdef"><b>Definition:</b> units.c:117</div></div>
+<div class="ttc" id="aunits_8h_html_ac5d0476c7efed96ce4431007b30bc085"><div class="ttname"><a href="units_8h.html#ac5d0476c7efed96ce4431007b30bc085">BGRA_toBGR</a></div><div class="ttdeci">void BGRA_toBGR(BGRA *bgra, BGR *bgr)</div><div class="ttdef"><b>Definition:</b> units.c:110</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

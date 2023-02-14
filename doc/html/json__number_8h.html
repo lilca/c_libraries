@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lilca C Library: src/datastruct/json/json_number.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lilca C Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1511046c5bc2549edab1aedab2ff8103.html">datastruct</a></li><li class="navelem"><a class="el" href="dir_31a65769bdccc2bbe912c00ae9ba1455.html">json</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">json_number.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="typedefs_8h_source.html">common/typedefs.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="json__common_8h_source.html">json_common.h</a>&quot;</code><br />
+</div>
+<p><a href="json__number_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___j_s_o_n_number.html">_JSONNumber</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:ac0aa9e3c475877439db852c098005309"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct___j_s_o_n_number.html">_JSONNumber</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__number_8h.html#ac0aa9e3c475877439db852c098005309">JSONNumber</a></td></tr>
+<tr class="separator:ac0aa9e3c475877439db852c098005309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a4663c367b6c7c37c2e0fac0ca3c564ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="json__number_8h.html#ac0aa9e3c475877439db852c098005309">JSONNumber</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__number_8h.html#a4663c367b6c7c37c2e0fac0ca3c564ea">JSONNumber_new</a> (void)</td></tr>
+<tr class="separator:a4663c367b6c7c37c2e0fac0ca3c564ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab18f9070c0c76daf8ea05b07f287ee88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__number_8h.html#ab18f9070c0c76daf8ea05b07f287ee88">JSONNumber_init</a> (<a class="el" href="json__number_8h.html#ac0aa9e3c475877439db852c098005309">JSONNumber</a> *this)</td></tr>
+<tr class="separator:ab18f9070c0c76daf8ea05b07f287ee88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2396d158a5adc2fe553072c2a069bec7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__number_8h.html#a2396d158a5adc2fe553072c2a069bec7">JSONNumber_free</a> (<a class="el" href="json__number_8h.html#ac0aa9e3c475877439db852c098005309">JSONNumber</a> *this)</td></tr>
+<tr class="separator:a2396d158a5adc2fe553072c2a069bec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea8bd4cfa4c08a5a28ac92f19e8b769"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__number_8h.html#a6ea8bd4cfa4c08a5a28ac92f19e8b769">JSONNumber_isFloat</a> (<a class="el" href="json__number_8h.html#ac0aa9e3c475877439db852c098005309">JSONNumber</a> *this)</td></tr>
+<tr class="separator:a6ea8bd4cfa4c08a5a28ac92f19e8b769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8bd78a499d9fcb1cf2fca349f8504c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__number_8h.html#ad8bd78a499d9fcb1cf2fca349f8504c7">JSONNumber_print</a> (<a class="el" href="json__number_8h.html#ac0aa9e3c475877439db852c098005309">JSONNumber</a> *this, int depth)</td></tr>
+<tr class="separator:ad8bd78a499d9fcb1cf2fca349f8504c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83e6ecb540cc9c3cee5517c8b8df1c86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__number_8h.html#a83e6ecb540cc9c3cee5517c8b8df1c86">JSONNumber_parse</a> (<a class="el" href="json__number_8h.html#ac0aa9e3c475877439db852c098005309">JSONNumber</a> *this, char **chr)</td></tr>
+<tr class="separator:a83e6ecb540cc9c3cee5517c8b8df1c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">型定義詳解</h2>
+<a id="ac0aa9e3c475877439db852c098005309" name="ac0aa9e3c475877439db852c098005309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0aa9e3c475877439db852c098005309">&#9670;&nbsp;</a></span>JSONNumber</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct___j_s_o_n_number.html">_JSONNumber</a> <a class="el" href="json__number_8h.html#ac0aa9e3c475877439db852c098005309">JSONNumber</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a2396d158a5adc2fe553072c2a069bec7" name="a2396d158a5adc2fe553072c2a069bec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2396d158a5adc2fe553072c2a069bec7">&#9670;&nbsp;</a></span>JSONNumber_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JSONNumber_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="json__number_8h.html#ac0aa9e3c475877439db852c098005309">JSONNumber</a> *&#160;</td>
+          <td class="paramname"><em>this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab18f9070c0c76daf8ea05b07f287ee88" name="ab18f9070c0c76daf8ea05b07f287ee88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab18f9070c0c76daf8ea05b07f287ee88">&#9670;&nbsp;</a></span>JSONNumber_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JSONNumber_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="json__number_8h.html#ac0aa9e3c475877439db852c098005309">JSONNumber</a> *&#160;</td>
+          <td class="paramname"><em>this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ea8bd4cfa4c08a5a28ac92f19e8b769" name="a6ea8bd4cfa4c08a5a28ac92f19e8b769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea8bd4cfa4c08a5a28ac92f19e8b769">&#9670;&nbsp;</a></span>JSONNumber_isFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int JSONNumber_isFloat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="json__number_8h.html#ac0aa9e3c475877439db852c098005309">JSONNumber</a> *&#160;</td>
+          <td class="paramname"><em>this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4663c367b6c7c37c2e0fac0ca3c564ea" name="a4663c367b6c7c37c2e0fac0ca3c564ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4663c367b6c7c37c2e0fac0ca3c564ea">&#9670;&nbsp;</a></span>JSONNumber_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="json__number_8h.html#ac0aa9e3c475877439db852c098005309">JSONNumber</a> * JSONNumber_new </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83e6ecb540cc9c3cee5517c8b8df1c86" name="a83e6ecb540cc9c3cee5517c8b8df1c86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83e6ecb540cc9c3cee5517c8b8df1c86">&#9670;&nbsp;</a></span>JSONNumber_parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int JSONNumber_parse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="json__number_8h.html#ac0aa9e3c475877439db852c098005309">JSONNumber</a> *&#160;</td>
+          <td class="paramname"><em>this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>chr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8bd78a499d9fcb1cf2fca349f8504c7" name="ad8bd78a499d9fcb1cf2fca349f8504c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8bd78a499d9fcb1cf2fca349f8504c7">&#9670;&nbsp;</a></span>JSONNumber_print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JSONNumber_print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="json__number_8h.html#ac0aa9e3c475877439db852c098005309">JSONNumber</a> *&#160;</td>
+          <td class="paramname"><em>this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lilca C Library: src/graphics/format/bmp/bmp.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lilca C Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_560415a5d2bc4999842279f4fc1debef.html">graphics</a></li><li class="navelem"><a class="el" href="dir_065142dcc79b3759d2e30d0671692727.html">format</a></li><li class="navelem"><a class="el" href="dir_91f807b64784ab30d68292cb5f0fbb64.html">bmp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">bmp.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>ビットマップファイルクラスのパブリックメソッド  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="typedefs_8h_source.html">common/typedefs.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="iobuffer_8h_source.html">iobuffer/iobuffer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="pixels_8h_source.html">graphics/format/pixels.h</a>&gt;</code><br />
+</div>
+<p><a href="bmp_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___b_m_p.html">_BMP</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップの構造体  <a href="struct___b_m_p.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a5e03ef02a82c245085b0d3d33904c16e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#a5e03ef02a82c245085b0d3d33904c16e">BMP_SUFFIX</a>&#160;&#160;&#160;&quot;bmp&quot;</td></tr>
+<tr class="memdesc:a5e03ef02a82c245085b0d3d33904c16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップファイルの拡張子  <a href="bmp_8h.html#a5e03ef02a82c245085b0d3d33904c16e">[詳解]</a><br /></td></tr>
+<tr class="separator:a5e03ef02a82c245085b0d3d33904c16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6404a45a7a88b570d5b3cdf4bf48639"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#ac6404a45a7a88b570d5b3cdf4bf48639">BMP_FILEHEADER_SIZE</a>&#160;&#160;&#160;14</td></tr>
+<tr class="memdesc:ac6404a45a7a88b570d5b3cdf4bf48639"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップのファイルヘッダーサイズ  <a href="bmp_8h.html#ac6404a45a7a88b570d5b3cdf4bf48639">[詳解]</a><br /></td></tr>
+<tr class="separator:ac6404a45a7a88b570d5b3cdf4bf48639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab65bd4185ac782900342afefb5453284"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#ab65bd4185ac782900342afefb5453284">BMP_INFOHEADER_SIZE</a>&#160;&#160;&#160;40</td></tr>
+<tr class="memdesc:ab65bd4185ac782900342afefb5453284"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップの情報ヘッダーサイズ  <a href="bmp_8h.html#ab65bd4185ac782900342afefb5453284">[詳解]</a><br /></td></tr>
+<tr class="separator:ab65bd4185ac782900342afefb5453284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa829d010d6d84885ecb641577ba94516"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#aa829d010d6d84885ecb641577ba94516">BMP_DEPTH_24BIT</a>&#160;&#160;&#160;24</td></tr>
+<tr class="memdesc:aa829d010d6d84885ecb641577ba94516"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルのデータサイズが24ビット  <a href="bmp_8h.html#aa829d010d6d84885ecb641577ba94516">[詳解]</a><br /></td></tr>
+<tr class="separator:aa829d010d6d84885ecb641577ba94516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a121ab772be5c134c3c75c2e6f4ca0e9e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#a121ab772be5c134c3c75c2e6f4ca0e9e">BMP_DEPTH_32BIT</a>&#160;&#160;&#160;32</td></tr>
+<tr class="memdesc:a121ab772be5c134c3c75c2e6f4ca0e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルのデータサイズが32ビット  <a href="bmp_8h.html#a121ab772be5c134c3c75c2e6f4ca0e9e">[詳解]</a><br /></td></tr>
+<tr class="separator:a121ab772be5c134c3c75c2e6f4ca0e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9863d150f9adbe8038313490605de2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#ae9863d150f9adbe8038313490605de2e">BMP_COMPRESSION_BI_RGB</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ae9863d150f9adbe8038313490605de2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">圧縮種類 (無圧縮)  <a href="bmp_8h.html#ae9863d150f9adbe8038313490605de2e">[詳解]</a><br /></td></tr>
+<tr class="separator:ae9863d150f9adbe8038313490605de2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab706e34bddf2a1a28ab8aebbbb43bfd7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#ab706e34bddf2a1a28ab8aebbbb43bfd7">BMP_WAY_BOTTOM2TOP</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ab706e34bddf2a1a28ab8aebbbb43bfd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">画素が下から上  <a href="bmp_8h.html#ab706e34bddf2a1a28ab8aebbbb43bfd7">[詳解]</a><br /></td></tr>
+<tr class="separator:ab706e34bddf2a1a28ab8aebbbb43bfd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65e4c6681419c93bfc19e075b7a66d7e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#a65e4c6681419c93bfc19e075b7a66d7e">BMP_WAY_TOP2BOTTOM</a>&#160;&#160;&#160;-1</td></tr>
+<tr class="memdesc:a65e4c6681419c93bfc19e075b7a66d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">画素が上から下  <a href="bmp_8h.html#a65e4c6681419c93bfc19e075b7a66d7e">[詳解]</a><br /></td></tr>
+<tr class="separator:a65e4c6681419c93bfc19e075b7a66d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:ac4c5133cfbeb042a0fc4bfbcc9a345ab"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct___b_m_p.html">_BMP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a></td></tr>
+<tr class="memdesc:ac4c5133cfbeb042a0fc4bfbcc9a345ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップ型  <a href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">[詳解]</a><br /></td></tr>
+<tr class="separator:ac4c5133cfbeb042a0fc4bfbcc9a345ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abacd68dedc55d7e50605ede8dc7714b7"><td class="memItemLeft" align="right" valign="top">typedef struct _BMPFileHeader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#abacd68dedc55d7e50605ede8dc7714b7">BMPFileHeader</a></td></tr>
+<tr class="memdesc:abacd68dedc55d7e50605ede8dc7714b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップファイルヘッダ型  <a href="bmp_8h.html#abacd68dedc55d7e50605ede8dc7714b7">[詳解]</a><br /></td></tr>
+<tr class="separator:abacd68dedc55d7e50605ede8dc7714b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b2a93eb27ca2eb37b924b0cc89998e"><td class="memItemLeft" align="right" valign="top">typedef struct _BMPInfoHeaderWB&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#a92b2a93eb27ca2eb37b924b0cc89998e">BMPInfoHeaderWB</a></td></tr>
+<tr class="memdesc:a92b2a93eb27ca2eb37b924b0cc89998e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップ情報ヘッダ(Windows Bitmap)型  <a href="bmp_8h.html#a92b2a93eb27ca2eb37b924b0cc89998e">[詳解]</a><br /></td></tr>
+<tr class="separator:a92b2a93eb27ca2eb37b924b0cc89998e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb1b64ee1bc691e5d2f501611737e4f"><td class="memItemLeft" align="right" valign="top">typedef struct _BMPInfoHeaderOS2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#a6fb1b64ee1bc691e5d2f501611737e4f">BMPInfoHeaderOS2</a></td></tr>
+<tr class="memdesc:a6fb1b64ee1bc691e5d2f501611737e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップ情報ヘッダ(OS/2)型  <a href="bmp_8h.html#a6fb1b64ee1bc691e5d2f501611737e4f">[詳解]</a><br /></td></tr>
+<tr class="separator:a6fb1b64ee1bc691e5d2f501611737e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a044ed3d199f31bda2921c232921f49ab"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#a044ed3d199f31bda2921c232921f49ab">__attribute__</a> ((__packed__)) _BMPFileHeader</td></tr>
+<tr class="memdesc:a044ed3d199f31bda2921c232921f49ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップファイルヘッダの構造体  <a href="bmp_8h.html#a044ed3d199f31bda2921c232921f49ab">[詳解]</a><br /></td></tr>
+<tr class="separator:a044ed3d199f31bda2921c232921f49ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b6eea28b57bda1e3d90929467b5879"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#a61b6eea28b57bda1e3d90929467b5879">BMP_new</a> (void)</td></tr>
+<tr class="memdesc:a61b6eea28b57bda1e3d90929467b5879"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップのコンストラクタ  <a href="bmp_8h.html#a61b6eea28b57bda1e3d90929467b5879">[詳解]</a><br /></td></tr>
+<tr class="separator:a61b6eea28b57bda1e3d90929467b5879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98a7d69f019f9900faec7a6fd906f58b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#a98a7d69f019f9900faec7a6fd906f58b">BMP_init</a> (<a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> *bmp)</td></tr>
+<tr class="memdesc:a98a7d69f019f9900faec7a6fd906f58b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップのイニシャライザ  <a href="bmp_8h.html#a98a7d69f019f9900faec7a6fd906f58b">[詳解]</a><br /></td></tr>
+<tr class="separator:a98a7d69f019f9900faec7a6fd906f58b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae236629135ad165d538389e4292cc5db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#ae236629135ad165d538389e4292cc5db">BMP_importFromStream</a> (<a class="el" href="iobuffer_8h.html#a5f07660bde464b1234c015bc600939d5">IOBuffer</a> *buf)</td></tr>
+<tr class="memdesc:ae236629135ad165d538389e4292cc5db"><td class="mdescLeft">&#160;</td><td class="mdescRight">IOBuffer型からビットマップ型を返す  <a href="bmp_8h.html#ae236629135ad165d538389e4292cc5db">[詳解]</a><br /></td></tr>
+<tr class="separator:ae236629135ad165d538389e4292cc5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c98f3616276230e145193bdd566c964"><td class="memItemLeft" align="right" valign="top"><a class="el" href="iobuffer_8h.html#a5f07660bde464b1234c015bc600939d5">IOBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#a2c98f3616276230e145193bdd566c964">BMP_exportToStream</a> (<a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> *bmp)</td></tr>
+<tr class="memdesc:a2c98f3616276230e145193bdd566c964"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップ型をビットマップファイル用のIOBufferに変換  <a href="bmp_8h.html#a2c98f3616276230e145193bdd566c964">[詳解]</a><br /></td></tr>
+<tr class="separator:a2c98f3616276230e145193bdd566c964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a2baad47effdc4c50ee96b6e2d56fbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#a7a2baad47effdc4c50ee96b6e2d56fbb">BMP_importFromPixels</a> (<a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *pix)</td></tr>
+<tr class="memdesc:a7a2baad47effdc4c50ee96b6e2d56fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixels型からBMP型に変換  <a href="bmp_8h.html#a7a2baad47effdc4c50ee96b6e2d56fbb">[詳解]</a><br /></td></tr>
+<tr class="separator:a7a2baad47effdc4c50ee96b6e2d56fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74faa07f6bacf3aae565223b84e5893"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#af74faa07f6bacf3aae565223b84e5893">BMP_exportToPixels</a> (<a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> *bmp)</td></tr>
+<tr class="memdesc:af74faa07f6bacf3aae565223b84e5893"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP型からPixels型に変換  <a href="bmp_8h.html#af74faa07f6bacf3aae565223b84e5893">[詳解]</a><br /></td></tr>
+<tr class="separator:af74faa07f6bacf3aae565223b84e5893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3172b9d0656aa662357d125f28300262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#a3172b9d0656aa662357d125f28300262">BMP_free</a> (<a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> *bmp)</td></tr>
+<tr class="memdesc:a3172b9d0656aa662357d125f28300262"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップのデストラクタ  <a href="bmp_8h.html#a3172b9d0656aa662357d125f28300262">[詳解]</a><br /></td></tr>
+<tr class="separator:a3172b9d0656aa662357d125f28300262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac97bd5da3f104ed21ea121c08c9c39c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp_8h.html#ac97bd5da3f104ed21ea121c08c9c39c3">BMP_print</a> (<a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> *bmp)</td></tr>
+<tr class="memdesc:ac97bd5da3f104ed21ea121c08c9c39c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップ内の情報を標準出力  <a href="bmp_8h.html#ac97bd5da3f104ed21ea121c08c9c39c3">[詳解]</a><br /></td></tr>
+<tr class="separator:ac97bd5da3f104ed21ea121c08c9c39c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p >ビットマップファイルクラスのパブリックメソッド </p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="ae9863d150f9adbe8038313490605de2e" name="ae9863d150f9adbe8038313490605de2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9863d150f9adbe8038313490605de2e">&#9670;&nbsp;</a></span>BMP_COMPRESSION_BI_RGB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_COMPRESSION_BI_RGB&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>圧縮種類 (無圧縮) </p>
+
+</div>
+</div>
+<a id="aa829d010d6d84885ecb641577ba94516" name="aa829d010d6d84885ecb641577ba94516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa829d010d6d84885ecb641577ba94516">&#9670;&nbsp;</a></span>BMP_DEPTH_24BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_DEPTH_24BIT&#160;&#160;&#160;24</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ピクセルのデータサイズが24ビット </p>
+
+</div>
+</div>
+<a id="a121ab772be5c134c3c75c2e6f4ca0e9e" name="a121ab772be5c134c3c75c2e6f4ca0e9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a121ab772be5c134c3c75c2e6f4ca0e9e">&#9670;&nbsp;</a></span>BMP_DEPTH_32BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_DEPTH_32BIT&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ピクセルのデータサイズが32ビット </p>
+
+</div>
+</div>
+<a id="ac6404a45a7a88b570d5b3cdf4bf48639" name="ac6404a45a7a88b570d5b3cdf4bf48639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6404a45a7a88b570d5b3cdf4bf48639">&#9670;&nbsp;</a></span>BMP_FILEHEADER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_FILEHEADER_SIZE&#160;&#160;&#160;14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビットマップのファイルヘッダーサイズ </p>
+
+</div>
+</div>
+<a id="ab65bd4185ac782900342afefb5453284" name="ab65bd4185ac782900342afefb5453284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab65bd4185ac782900342afefb5453284">&#9670;&nbsp;</a></span>BMP_INFOHEADER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_INFOHEADER_SIZE&#160;&#160;&#160;40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビットマップの情報ヘッダーサイズ </p>
+
+</div>
+</div>
+<a id="a5e03ef02a82c245085b0d3d33904c16e" name="a5e03ef02a82c245085b0d3d33904c16e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e03ef02a82c245085b0d3d33904c16e">&#9670;&nbsp;</a></span>BMP_SUFFIX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_SUFFIX&#160;&#160;&#160;&quot;bmp&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビットマップファイルの拡張子 </p>
+
+</div>
+</div>
+<a id="ab706e34bddf2a1a28ab8aebbbb43bfd7" name="ab706e34bddf2a1a28ab8aebbbb43bfd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab706e34bddf2a1a28ab8aebbbb43bfd7">&#9670;&nbsp;</a></span>BMP_WAY_BOTTOM2TOP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_WAY_BOTTOM2TOP&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>画素が下から上 </p>
+
+</div>
+</div>
+<a id="a65e4c6681419c93bfc19e075b7a66d7e" name="a65e4c6681419c93bfc19e075b7a66d7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65e4c6681419c93bfc19e075b7a66d7e">&#9670;&nbsp;</a></span>BMP_WAY_TOP2BOTTOM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_WAY_TOP2BOTTOM&#160;&#160;&#160;-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>画素が上から下 </p>
+
+</div>
+</div>
+<h2 class="groupheader">型定義詳解</h2>
+<a id="ac4c5133cfbeb042a0fc4bfbcc9a345ab" name="ac4c5133cfbeb042a0fc4bfbcc9a345ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4c5133cfbeb042a0fc4bfbcc9a345ab">&#9670;&nbsp;</a></span>BMP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct___b_m_p.html">_BMP</a> <a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビットマップ型 </p>
+
+</div>
+</div>
+<a id="abacd68dedc55d7e50605ede8dc7714b7" name="abacd68dedc55d7e50605ede8dc7714b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abacd68dedc55d7e50605ede8dc7714b7">&#9670;&nbsp;</a></span>BMPFileHeader</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct _BMPFileHeader <a class="el" href="bmp_8h.html#abacd68dedc55d7e50605ede8dc7714b7">BMPFileHeader</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビットマップファイルヘッダ型 </p>
+
+</div>
+</div>
+<a id="a6fb1b64ee1bc691e5d2f501611737e4f" name="a6fb1b64ee1bc691e5d2f501611737e4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb1b64ee1bc691e5d2f501611737e4f">&#9670;&nbsp;</a></span>BMPInfoHeaderOS2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct _BMPInfoHeaderOS2 <a class="el" href="bmp_8h.html#a6fb1b64ee1bc691e5d2f501611737e4f">BMPInfoHeaderOS2</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビットマップ情報ヘッダ(OS/2)型 </p>
+
+</div>
+</div>
+<a id="a92b2a93eb27ca2eb37b924b0cc89998e" name="a92b2a93eb27ca2eb37b924b0cc89998e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92b2a93eb27ca2eb37b924b0cc89998e">&#9670;&nbsp;</a></span>BMPInfoHeaderWB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct _BMPInfoHeaderWB <a class="el" href="bmp_8h.html#a92b2a93eb27ca2eb37b924b0cc89998e">BMPInfoHeaderWB</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビットマップ情報ヘッダ(Windows Bitmap)型 </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a044ed3d199f31bda2921c232921f49ab" name="a044ed3d199f31bda2921c232921f49ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a044ed3d199f31bda2921c232921f49ab">&#9670;&nbsp;</a></span>__attribute__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct __attribute__ </td>
+          <td>(</td>
+          <td class="paramtype">(__packed__)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビットマップファイルヘッダの構造体 </p>
+<p >ビットマップ情報ヘッダ(OS/2)の構造体</p>
+<p >ビットマップ情報ヘッダ(Windows Bitmap)の構造体 </p>
+
+</div>
+</div>
+<a id="af74faa07f6bacf3aae565223b84e5893" name="af74faa07f6bacf3aae565223b84e5893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af74faa07f6bacf3aae565223b84e5893">&#9670;&nbsp;</a></span>BMP_exportToPixels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> * BMP_exportToPixels </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> *&#160;</td>
+          <td class="paramname"><em>bmp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BMP型からPixels型に変換 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bmp</td><td>BMP型のポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Pixels* 変換されたPixels型 </dd></dl>
+
+</div>
+</div>
+<a id="a2c98f3616276230e145193bdd566c964" name="a2c98f3616276230e145193bdd566c964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c98f3616276230e145193bdd566c964">&#9670;&nbsp;</a></span>BMP_exportToStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="iobuffer_8h.html#a5f07660bde464b1234c015bc600939d5">IOBuffer</a> * BMP_exportToStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> *&#160;</td>
+          <td class="paramname"><em>bmp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビットマップ型をビットマップファイル用のIOBufferに変換 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bmp</td><td>BMP型のポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>IOBuffer* ビットマップファイルのIOBuffer </dd></dl>
+
+</div>
+</div>
+<a id="a3172b9d0656aa662357d125f28300262" name="a3172b9d0656aa662357d125f28300262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3172b9d0656aa662357d125f28300262">&#9670;&nbsp;</a></span>BMP_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BMP_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> *&#160;</td>
+          <td class="paramname"><em>bmp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビットマップのデストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bmp</td><td>BMP型のポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>なし </dd></dl>
+
+</div>
+</div>
+<a id="a7a2baad47effdc4c50ee96b6e2d56fbb" name="a7a2baad47effdc4c50ee96b6e2d56fbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a2baad47effdc4c50ee96b6e2d56fbb">&#9670;&nbsp;</a></span>BMP_importFromPixels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> * BMP_importFromPixels </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pixels_8h.html#ad42eda309de53584647052024edac55f">Pixels</a> *&#160;</td>
+          <td class="paramname"><em>pix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pixels型からBMP型に変換 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pix</td><td>Pixels型のポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>BMP* 変換されたBMP型 </dd></dl>
+
+</div>
+</div>
+<a id="ae236629135ad165d538389e4292cc5db" name="ae236629135ad165d538389e4292cc5db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae236629135ad165d538389e4292cc5db">&#9670;&nbsp;</a></span>BMP_importFromStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> * BMP_importFromStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="iobuffer_8h.html#a5f07660bde464b1234c015bc600939d5">IOBuffer</a> *&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IOBuffer型からビットマップ型を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>ビットマップファイルのIOBuffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>BMP* ビットマップ </dd></dl>
+
+</div>
+</div>
+<a id="a98a7d69f019f9900faec7a6fd906f58b" name="a98a7d69f019f9900faec7a6fd906f58b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98a7d69f019f9900faec7a6fd906f58b">&#9670;&nbsp;</a></span>BMP_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BMP_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> *&#160;</td>
+          <td class="paramname"><em>bmp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビットマップのイニシャライザ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bmp</td><td>BMP型のポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>なし </dd></dl>
+
+</div>
+</div>
+<a id="a61b6eea28b57bda1e3d90929467b5879" name="a61b6eea28b57bda1e3d90929467b5879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61b6eea28b57bda1e3d90929467b5879">&#9670;&nbsp;</a></span>BMP_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> * BMP_new </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビットマップのコンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">なし</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>BMP* ビットマップインスタンス </dd></dl>
+
+</div>
+</div>
+<a id="ac97bd5da3f104ed21ea121c08c9c39c3" name="ac97bd5da3f104ed21ea121c08c9c39c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac97bd5da3f104ed21ea121c08c9c39c3">&#9670;&nbsp;</a></span>BMP_print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BMP_print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bmp_8h.html#ac4c5133cfbeb042a0fc4bfbcc9a345ab">BMP</a> *&#160;</td>
+          <td class="paramname"><em>bmp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビットマップ内の情報を標準出力 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bmp</td><td>BMP型のポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>なし </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

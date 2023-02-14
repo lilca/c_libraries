@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lilca C Library: src/abf/tag_data_controller.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lilca C Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_662bda4cdc66e336109fab17e0ec7383.html">abf</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">tag_data_controller.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="tag__data__controller_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef TAG_DATA_CONTROLLER_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define TAG_DATA_CONTROLLER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;../common/typedefs.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="struct_t_a_g___i_t_e_m.html">    8</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="struct_t_a_g___i_t_e_m.html#a5def3e23a4cf9f3044522c505bd693d4">    9</a></span>  <a class="code hl_typedef" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code hl_variable" href="struct_t_a_g___i_t_e_m.html#a5def3e23a4cf9f3044522c505bd693d4">nameId</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="struct_t_a_g___i_t_e_m.html#af92ef2cab07cff79ccc745dbad2def4f">   10</a></span>  <a class="code hl_typedef" href="typedefs_8h.html#a2834615d491c11fba337095447f25886">uint64</a> <a class="code hl_variable" href="struct_t_a_g___i_t_e_m.html#af92ef2cab07cff79ccc745dbad2def4f">length</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="struct_t_a_g___i_t_e_m.html#adcf160997f5e5c4feb490ebd3cbcc5b2">   11</a></span>  <a class="code hl_typedef" href="typedefs_8h.html#ae47c588f3ab8c61121c1c7ab7edc47cd">int8</a>* <a class="code hl_variable" href="struct_t_a_g___i_t_e_m.html#adcf160997f5e5c4feb490ebd3cbcc5b2">data</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>} <a class="code hl_struct" href="struct_t_a_g___i_t_e_m.html">TAG_ITEM</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="tag__data__controller_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5">   14</a></span><span class="preprocessor">#define ERROR                   -1</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="tag__data__controller_8h.html#a1291f416b069313021b519eea62d5bf1">   15</a></span><span class="preprocessor">#define NORMAL                  0</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="tag__data__controller_8h.html#a4436263fa901d33c9cfc39cb10a183b9">   16</a></span><span class="preprocessor">#define MAX_TAG_LIST_SIZE       100</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><a class="code hl_typedef" href="typedefs_8h.html#ae47c588f3ab8c61121c1c7ab7edc47cd">int8</a>* <a class="code hl_function" href="tag__data__controller_8h.html#ad1227fe94cc74b830acd2448c923fa73">tagDataController_getTagName</a>(<a class="code hl_typedef" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">void</span> <a class="code hl_function" href="tag__data__controller_8h.html#a65a57349eb58614a15d17f31e8c03054">tagDataController_init</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><a class="code hl_typedef" href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a> <a class="code hl_function" href="tag__data__controller_8h.html#a992ab7d70601c98a5723345c765da703">tagDataController_getSize</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><a class="code hl_typedef" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code hl_function" href="tag__data__controller_8h.html#a1b063ef97861e9de51a3ea76d6fad80a">tagDataController_put</a>(<a class="code hl_struct" href="struct_t_a_g___i_t_e_m.html">TAG_ITEM</a> item);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><a class="code hl_struct" href="struct_t_a_g___i_t_e_m.html">TAG_ITEM</a> <a class="code hl_function" href="tag__data__controller_8h.html#aec2696b55268a78821655e86bc8c5640">tagDataController_get</a>(<a class="code hl_typedef" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> index);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><a class="code hl_typedef" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code hl_function" href="tag__data__controller_8h.html#addd52c866badb40e0ebc9903c6ea11b7">tagDataController_parse</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="typedefs_8h.html#ae47c588f3ab8c61121c1c7ab7edc47cd">int8</a>* ptr, <a class="code hl_typedef" href="typedefs_8h.html#a2834615d491c11fba337095447f25886">uint64</a> length);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><a class="code hl_typedef" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code hl_function" href="tag__data__controller_8h.html#a8c0917025a7b172c677ecbf08a8ab4f9">tagDataController_fwrite</a>(FILE* fp);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="astruct_t_a_g___i_t_e_m_html"><div class="ttname"><a href="struct_t_a_g___i_t_e_m.html">TAG_ITEM</a></div><div class="ttdef"><b>Definition:</b> tag_data_controller.h:8</div></div>
+<div class="ttc" id="astruct_t_a_g___i_t_e_m_html_a5def3e23a4cf9f3044522c505bd693d4"><div class="ttname"><a href="struct_t_a_g___i_t_e_m.html#a5def3e23a4cf9f3044522c505bd693d4">TAG_ITEM::nameId</a></div><div class="ttdeci">int16 nameId</div><div class="ttdef"><b>Definition:</b> tag_data_controller.h:9</div></div>
+<div class="ttc" id="astruct_t_a_g___i_t_e_m_html_adcf160997f5e5c4feb490ebd3cbcc5b2"><div class="ttname"><a href="struct_t_a_g___i_t_e_m.html#adcf160997f5e5c4feb490ebd3cbcc5b2">TAG_ITEM::data</a></div><div class="ttdeci">int8 * data</div><div class="ttdef"><b>Definition:</b> tag_data_controller.h:11</div></div>
+<div class="ttc" id="astruct_t_a_g___i_t_e_m_html_af92ef2cab07cff79ccc745dbad2def4f"><div class="ttname"><a href="struct_t_a_g___i_t_e_m.html#af92ef2cab07cff79ccc745dbad2def4f">TAG_ITEM::length</a></div><div class="ttdeci">uint64 length</div><div class="ttdef"><b>Definition:</b> tag_data_controller.h:10</div></div>
+<div class="ttc" id="atag__data__controller_8h_html_a1b063ef97861e9de51a3ea76d6fad80a"><div class="ttname"><a href="tag__data__controller_8h.html#a1b063ef97861e9de51a3ea76d6fad80a">tagDataController_put</a></div><div class="ttdeci">int16 tagDataController_put(TAG_ITEM item)</div><div class="ttdef"><b>Definition:</b> tag_data_controller.c:34</div></div>
+<div class="ttc" id="atag__data__controller_8h_html_a65a57349eb58614a15d17f31e8c03054"><div class="ttname"><a href="tag__data__controller_8h.html#a65a57349eb58614a15d17f31e8c03054">tagDataController_init</a></div><div class="ttdeci">void tagDataController_init()</div><div class="ttdef"><b>Definition:</b> tag_data_controller.c:23</div></div>
+<div class="ttc" id="atag__data__controller_8h_html_a8c0917025a7b172c677ecbf08a8ab4f9"><div class="ttname"><a href="tag__data__controller_8h.html#a8c0917025a7b172c677ecbf08a8ab4f9">tagDataController_fwrite</a></div><div class="ttdeci">int16 tagDataController_fwrite(FILE *fp)</div><div class="ttdef"><b>Definition:</b> tag_data_controller.c:78</div></div>
+<div class="ttc" id="atag__data__controller_8h_html_a992ab7d70601c98a5723345c765da703"><div class="ttname"><a href="tag__data__controller_8h.html#a992ab7d70601c98a5723345c765da703">tagDataController_getSize</a></div><div class="ttdeci">uint16 tagDataController_getSize()</div><div class="ttdef"><b>Definition:</b> tag_data_controller.c:30</div></div>
+<div class="ttc" id="atag__data__controller_8h_html_ad1227fe94cc74b830acd2448c923fa73"><div class="ttname"><a href="tag__data__controller_8h.html#ad1227fe94cc74b830acd2448c923fa73">tagDataController_getTagName</a></div><div class="ttdeci">int8 * tagDataController_getTagName(int16 id)</div><div class="ttdef"><b>Definition:</b> tag_data_controller.c:17</div></div>
+<div class="ttc" id="atag__data__controller_8h_html_addd52c866badb40e0ebc9903c6ea11b7"><div class="ttname"><a href="tag__data__controller_8h.html#addd52c866badb40e0ebc9903c6ea11b7">tagDataController_parse</a></div><div class="ttdeci">int16 tagDataController_parse(const int8 *ptr, uint64 length)</div><div class="ttdef"><b>Definition:</b> tag_data_controller.c:51</div></div>
+<div class="ttc" id="atag__data__controller_8h_html_aec2696b55268a78821655e86bc8c5640"><div class="ttname"><a href="tag__data__controller_8h.html#aec2696b55268a78821655e86bc8c5640">tagDataController_get</a></div><div class="ttdeci">TAG_ITEM tagDataController_get(int16 index)</div><div class="ttdef"><b>Definition:</b> tag_data_controller.c:42</div></div>
+<div class="ttc" id="atypedefs_8h_html_a2834615d491c11fba337095447f25886"><div class="ttname"><a href="typedefs_8h.html#a2834615d491c11fba337095447f25886">uint64</a></div><div class="ttdeci">unsigned long long int uint64</div><div class="ttdoc">8バイト(64ビット)の符号なし整数</div><div class="ttdef"><b>Definition:</b> typedefs.h:49</div></div>
+<div class="ttc" id="atypedefs_8h_html_a2e00abb078d312d1d8c4fbcd6be343d8"><div class="ttname"><a href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a></div><div class="ttdeci">unsigned short int uint16</div><div class="ttdoc">2バイト(16ビット)の符号なし整数</div><div class="ttdef"><b>Definition:</b> typedefs.h:41</div></div>
+<div class="ttc" id="atypedefs_8h_html_adf957e9fa8c95c188ffacb8197aa8725"><div class="ttname"><a href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a></div><div class="ttdeci">short int int16</div><div class="ttdoc">2バイト(16ビット)の符号付き整数</div><div class="ttdef"><b>Definition:</b> typedefs.h:25</div></div>
+<div class="ttc" id="atypedefs_8h_html_ae47c588f3ab8c61121c1c7ab7edc47cd"><div class="ttname"><a href="typedefs_8h.html#ae47c588f3ab8c61121c1c7ab7edc47cd">int8</a></div><div class="ttdeci">char int8</div><div class="ttdoc">1バイト(8ビット)の符号付き整数</div><div class="ttdef"><b>Definition:</b> typedefs.h:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

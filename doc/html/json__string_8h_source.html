@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lilca C Library: src/datastruct/json/json_string.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lilca C Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1511046c5bc2549edab1aedab2ff8103.html">datastruct</a></li><li class="navelem"><a class="el" href="dir_31a65769bdccc2bbe912c00ae9ba1455.html">json</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">json_string.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="json__string_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef JSONSTRING_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define JSONSTRING_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="typedefs_8h.html">common/typedefs.h</a>&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="json__common_8h.html">json_common.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="json__string_8h.html#a7c2d8cd1cbbbb96e8371b428fe5b693d">   12</a></span><span class="preprocessor">#define JSON_STRING_BLOCK 4096</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="struct___j_s_o_n_string.html">   14</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct___j_s_o_n_string.html">_JSONString</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct___j_s_o_n_string.html#a4a41fd550f7f040306319c3daf9e862a">   15</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code hl_variable" href="struct___j_s_o_n_string.html#a4a41fd550f7f040306319c3daf9e862a">size</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct___j_s_o_n_string.html#aaf89b5e4c8777891ba70e394cc6bc7eb">   16</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>* <a class="code hl_variable" href="struct___j_s_o_n_string.html#aaf89b5e4c8777891ba70e394cc6bc7eb">buf</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="json__string_8h.html#a847f1dc2745640f37f996f59653089ea">   18</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct___j_s_o_n_string.html">_JSONString</a> <a class="code hl_struct" href="struct___j_s_o_n_string.html">JSONString</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><a class="code hl_struct" href="struct___j_s_o_n_string.html">JSONString</a>* <a class="code hl_function" href="json__string_8h.html#a63ab1e41f5a1562d7d6ef35675897410">JSONString_new</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> <a class="code hl_function" href="json__string_8h.html#ab95c17c103b76225c41ba5799a7da5e9">JSONString_init</a>(<a class="code hl_struct" href="struct___j_s_o_n_string.html">JSONString</a>* <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="json__string_8h.html#a582fc084695c9adebdfd3c4486142910">JSONString_free</a>(<a class="code hl_struct" href="struct___j_s_o_n_string.html">JSONString</a>* <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> <a class="code hl_function" href="json__string_8h.html#a665c7aa7ea53372ffc9652d095405637">JSONString_freeString</a>(<a class="code hl_struct" href="struct___j_s_o_n_string.html">JSONString</a>* <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="json__string_8h.html#aee2218334f7348b4c726d7e05464aadb">JSONString_print</a>(<a class="code hl_struct" href="struct___j_s_o_n_string.html">JSONString</a>* <span class="keyword">this</span>, <span class="keywordtype">int</span> depth);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">int</span> <a class="code hl_function" href="json__string_8h.html#ae419bb6c24a412910c8d141505c9d39d">JSONString_parse</a>(<a class="code hl_struct" href="struct___j_s_o_n_string.html">JSONString</a>* <span class="keyword">this</span>, <span class="keywordtype">char</span>** chr);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="ajson__common_8h_html"><div class="ttname"><a href="json__common_8h.html">json_common.h</a></div></div>
+<div class="ttc" id="ajson__string_8h_html_a582fc084695c9adebdfd3c4486142910"><div class="ttname"><a href="json__string_8h.html#a582fc084695c9adebdfd3c4486142910">JSONString_free</a></div><div class="ttdeci">void JSONString_free(JSONString *this)</div><div class="ttdef"><b>Definition:</b> json_string.c:17</div></div>
+<div class="ttc" id="ajson__string_8h_html_a63ab1e41f5a1562d7d6ef35675897410"><div class="ttname"><a href="json__string_8h.html#a63ab1e41f5a1562d7d6ef35675897410">JSONString_new</a></div><div class="ttdeci">JSONString * JSONString_new(void)</div><div class="ttdef"><b>Definition:</b> json_string.c:5</div></div>
+<div class="ttc" id="ajson__string_8h_html_a665c7aa7ea53372ffc9652d095405637"><div class="ttname"><a href="json__string_8h.html#a665c7aa7ea53372ffc9652d095405637">JSONString_freeString</a></div><div class="ttdeci">void JSONString_freeString(JSONString *this)</div><div class="ttdef"><b>Definition:</b> json_string.c:24</div></div>
+<div class="ttc" id="ajson__string_8h_html_ab95c17c103b76225c41ba5799a7da5e9"><div class="ttname"><a href="json__string_8h.html#ab95c17c103b76225c41ba5799a7da5e9">JSONString_init</a></div><div class="ttdeci">void JSONString_init(JSONString *this)</div><div class="ttdef"><b>Definition:</b> json_string.c:11</div></div>
+<div class="ttc" id="ajson__string_8h_html_ae419bb6c24a412910c8d141505c9d39d"><div class="ttname"><a href="json__string_8h.html#ae419bb6c24a412910c8d141505c9d39d">JSONString_parse</a></div><div class="ttdeci">int JSONString_parse(JSONString *this, char **chr)</div><div class="ttdef"><b>Definition:</b> json_string.c:41</div></div>
+<div class="ttc" id="ajson__string_8h_html_aee2218334f7348b4c726d7e05464aadb"><div class="ttname"><a href="json__string_8h.html#aee2218334f7348b4c726d7e05464aadb">JSONString_print</a></div><div class="ttdeci">void JSONString_print(JSONString *this, int depth)</div><div class="ttdef"><b>Definition:</b> json_string.c:34</div></div>
+<div class="ttc" id="astruct___j_s_o_n_string_html"><div class="ttname"><a href="struct___j_s_o_n_string.html">_JSONString</a></div><div class="ttdef"><b>Definition:</b> json_string.h:14</div></div>
+<div class="ttc" id="astruct___j_s_o_n_string_html_a4a41fd550f7f040306319c3daf9e862a"><div class="ttname"><a href="struct___j_s_o_n_string.html#a4a41fd550f7f040306319c3daf9e862a">_JSONString::size</a></div><div class="ttdeci">uint32 size</div><div class="ttdef"><b>Definition:</b> json_string.h:15</div></div>
+<div class="ttc" id="astruct___j_s_o_n_string_html_aaf89b5e4c8777891ba70e394cc6bc7eb"><div class="ttname"><a href="struct___j_s_o_n_string.html#aaf89b5e4c8777891ba70e394cc6bc7eb">_JSONString::buf</a></div><div class="ttdeci">uint8 * buf</div><div class="ttdef"><b>Definition:</b> json_string.h:16</div></div>
+<div class="ttc" id="atypedefs_8h_html"><div class="ttname"><a href="typedefs_8h.html">typedefs.h</a></div><div class="ttdoc">共用変数＆定数の定義</div></div>
+<div class="ttc" id="atypedefs_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdoc">4バイト(32ビット)の符号なし整数</div><div class="ttdef"><b>Definition:</b> typedefs.h:45</div></div>
+<div class="ttc" id="atypedefs_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="typedefs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdoc">1バイト(8ビット)の符号なし整数</div><div class="ttdef"><b>Definition:</b> typedefs.h:37</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

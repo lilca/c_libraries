@@ -1,3 +1,7 @@
+/**
+ * ビットマップファイルクラスのソース
+ * @file
+ */
 #include "bmp.h"
 
 static int _parseHeader(BMP* bmp, uint8** pp);

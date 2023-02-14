@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lilca C Library: src/graphics/format/pixels.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lilca C Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_560415a5d2bc4999842279f4fc1debef.html">graphics</a></li><li class="navelem"><a class="el" href="dir_065142dcc79b3759d2e30d0671692727.html">format</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">pixels.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pixels_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef GRAPHICS_FORMAT_PIXELS</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define GRAPHICS_FORMAT_PIXELS</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="typedefs_8h.html">common/typedefs.h</a>&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;<a class="code" href="units_8h.html">graphics/format/units.h</a>&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;<a class="code" href="pixels_8h.html">graphics/format/pixels.h</a>&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="pixels_8h.html#a99e3ec88c2554d88daea95a08333f8e7">   12</a></span><span class="preprocessor">#define PIXELS_SUFFIX &quot;pix&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="struct___pixels.html">   14</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct___pixels.html">_Pixels</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct___pixels.html#aa563d8595fae66a156ef29850d5fd6aa">   15</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code hl_variable" href="struct___pixels.html#aa563d8595fae66a156ef29850d5fd6aa">width</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct___pixels.html#a875aaac5142839fcc7b5f04eb8475858">   16</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code hl_variable" href="struct___pixels.html#a875aaac5142839fcc7b5f04eb8475858">height</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct___pixels.html#af7e7d552d0f648cd7421216efc6a6f83">   17</a></span>    <a class="code hl_typedef" href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">fARGB</a>* <a class="code hl_variable" href="struct___pixels.html#af7e7d552d0f648cd7421216efc6a6f83">pixels</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="pixels_8h.html#ad42eda309de53584647052024edac55f">   19</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct___pixels.html">_Pixels</a> <a class="code hl_struct" href="struct___pixels.html">Pixels</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><a class="code hl_struct" href="struct___pixels.html">Pixels</a>* <a class="code hl_function" href="pixels_8h.html#a42d4367068f3dcb2560fad595f2b4b9f">Pixels_new</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">int</span> <a class="code hl_function" href="pixels_8h.html#a3e301f6a5416ea2f93b985283a01cfff">Pixels_init</a>(<a class="code hl_struct" href="struct___pixels.html">Pixels</a>* pix);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">int</span> <a class="code hl_function" href="pixels_8h.html#a8c0ec856ebd62d55e3732cbea78e0dc5">Pixels_createEmptyMatrix</a>(<a class="code hl_struct" href="struct___pixels.html">Pixels</a>* pix, <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code hl_variable" href="struct___pixels.html#aa563d8595fae66a156ef29850d5fd6aa">width</a>, <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code hl_variable" href="struct___pixels.html#a875aaac5142839fcc7b5f04eb8475858">height</a>, <a class="code hl_typedef" href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a> depth);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="pixels_8h.html#ac3d94db75ddd649ceb0c84bd02e103a3">Pixels_free</a>(<a class="code hl_struct" href="struct___pixels.html">Pixels</a>* pix);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> <a class="code hl_function" href="pixels_8h.html#a13acc329288c9296cefeff0376341a2a">Pixels_print</a>(<a class="code hl_struct" href="struct___pixels.html">Pixels</a>* pix);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> <a class="code hl_function" href="pixels_8h.html#a600ea269318415264d5aaf9a922de244">Pixels_grayScale</a>(<a class="code hl_struct" href="struct___pixels.html">Pixels</a>* pix);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><a class="code hl_typedef" href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">fARGB</a> <a class="code hl_function" href="pixels_8h.html#acc83b658a289f87d2359efc2c1ee5e49">Pixels_getValue</a>(<a class="code hl_struct" href="struct___pixels.html">Pixels</a>* pix, <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> x, <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> y);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">//uint32* Pixels_getHistColor(Pixels* pix, int32 size);</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="apixels_8h_html"><div class="ttname"><a href="pixels_8h.html">pixels.h</a></div></div>
+<div class="ttc" id="apixels_8h_html_a13acc329288c9296cefeff0376341a2a"><div class="ttname"><a href="pixels_8h.html#a13acc329288c9296cefeff0376341a2a">Pixels_print</a></div><div class="ttdeci">void Pixels_print(Pixels *pix)</div><div class="ttdef"><b>Definition:</b> pixels.c:36</div></div>
+<div class="ttc" id="apixels_8h_html_a3e301f6a5416ea2f93b985283a01cfff"><div class="ttname"><a href="pixels_8h.html#a3e301f6a5416ea2f93b985283a01cfff">Pixels_init</a></div><div class="ttdeci">int Pixels_init(Pixels *pix)</div><div class="ttdef"><b>Definition:</b> pixels.c:9</div></div>
+<div class="ttc" id="apixels_8h_html_a42d4367068f3dcb2560fad595f2b4b9f"><div class="ttname"><a href="pixels_8h.html#a42d4367068f3dcb2560fad595f2b4b9f">Pixels_new</a></div><div class="ttdeci">Pixels * Pixels_new(void)</div><div class="ttdef"><b>Definition:</b> pixels.c:3</div></div>
+<div class="ttc" id="apixels_8h_html_a600ea269318415264d5aaf9a922de244"><div class="ttname"><a href="pixels_8h.html#a600ea269318415264d5aaf9a922de244">Pixels_grayScale</a></div><div class="ttdeci">void Pixels_grayScale(Pixels *pix)</div><div class="ttdef"><b>Definition:</b> pixels.c:45</div></div>
+<div class="ttc" id="apixels_8h_html_a8c0ec856ebd62d55e3732cbea78e0dc5"><div class="ttname"><a href="pixels_8h.html#a8c0ec856ebd62d55e3732cbea78e0dc5">Pixels_createEmptyMatrix</a></div><div class="ttdeci">int Pixels_createEmptyMatrix(Pixels *pix, uint32 width, uint32 height, uint16 depth)</div><div class="ttdef"><b>Definition:</b> pixels.c:17</div></div>
+<div class="ttc" id="apixels_8h_html_ac3d94db75ddd649ceb0c84bd02e103a3"><div class="ttname"><a href="pixels_8h.html#ac3d94db75ddd649ceb0c84bd02e103a3">Pixels_free</a></div><div class="ttdeci">void Pixels_free(Pixels *pix)</div><div class="ttdef"><b>Definition:</b> pixels.c:25</div></div>
+<div class="ttc" id="apixels_8h_html_acc83b658a289f87d2359efc2c1ee5e49"><div class="ttname"><a href="pixels_8h.html#acc83b658a289f87d2359efc2c1ee5e49">Pixels_getValue</a></div><div class="ttdeci">fARGB Pixels_getValue(Pixels *pix, uint32 x, uint32 y)</div><div class="ttdef"><b>Definition:</b> pixels.c:54</div></div>
+<div class="ttc" id="astruct___pixels_html"><div class="ttname"><a href="struct___pixels.html">_Pixels</a></div><div class="ttdef"><b>Definition:</b> pixels.h:14</div></div>
+<div class="ttc" id="astruct___pixels_html_a875aaac5142839fcc7b5f04eb8475858"><div class="ttname"><a href="struct___pixels.html#a875aaac5142839fcc7b5f04eb8475858">_Pixels::height</a></div><div class="ttdeci">uint32 height</div><div class="ttdef"><b>Definition:</b> pixels.h:16</div></div>
+<div class="ttc" id="astruct___pixels_html_aa563d8595fae66a156ef29850d5fd6aa"><div class="ttname"><a href="struct___pixels.html#aa563d8595fae66a156ef29850d5fd6aa">_Pixels::width</a></div><div class="ttdeci">uint32 width</div><div class="ttdef"><b>Definition:</b> pixels.h:15</div></div>
+<div class="ttc" id="astruct___pixels_html_af7e7d552d0f648cd7421216efc6a6f83"><div class="ttname"><a href="struct___pixels.html#af7e7d552d0f648cd7421216efc6a6f83">_Pixels::pixels</a></div><div class="ttdeci">fARGB * pixels</div><div class="ttdef"><b>Definition:</b> pixels.h:17</div></div>
+<div class="ttc" id="atypedefs_8h_html"><div class="ttname"><a href="typedefs_8h.html">typedefs.h</a></div><div class="ttdoc">共用変数＆定数の定義</div></div>
+<div class="ttc" id="atypedefs_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdoc">4バイト(32ビット)の符号なし整数</div><div class="ttdef"><b>Definition:</b> typedefs.h:45</div></div>
+<div class="ttc" id="atypedefs_8h_html_a2e00abb078d312d1d8c4fbcd6be343d8"><div class="ttname"><a href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a></div><div class="ttdeci">unsigned short int uint16</div><div class="ttdoc">2バイト(16ビット)の符号なし整数</div><div class="ttdef"><b>Definition:</b> typedefs.h:41</div></div>
+<div class="ttc" id="aunits_8h_html"><div class="ttname"><a href="units_8h.html">units.h</a></div></div>
+<div class="ttc" id="aunits_8h_html_a9816d4655f732e285c7ea7fe9042109e"><div class="ttname"><a href="units_8h.html#a9816d4655f732e285c7ea7fe9042109e">fARGB</a></div><div class="ttdeci">struct _fARGB fARGB</div><div class="ttdef"><b>Definition:</b> units.h:15</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

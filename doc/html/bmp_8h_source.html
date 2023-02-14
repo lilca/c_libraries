@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lilca C Library: src/graphics/format/bmp/bmp.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lilca C Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_560415a5d2bc4999842279f4fc1debef.html">graphics</a></li><li class="navelem"><a class="el" href="dir_065142dcc79b3759d2e30d0671692727.html">format</a></li><li class="navelem"><a class="el" href="dir_91f807b64784ab30d68292cb5f0fbb64.html">bmp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">bmp.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="bmp_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef GRAPHICS_FORMAT_BMP</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define GRAPHICS_FORMAT_BMP</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;<a class="code" href="typedefs_8h.html">common/typedefs.h</a>&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="iobuffer_8h.html">iobuffer/iobuffer.h</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="pixels_8h.html">graphics/format/pixels.h</a>&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="bmp_8h.html#a5e03ef02a82c245085b0d3d33904c16e">   18</a></span><span class="preprocessor">#define BMP_SUFFIX &quot;bmp&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="bmp_8h.html#ac6404a45a7a88b570d5b3cdf4bf48639">   20</a></span><span class="preprocessor">#define BMP_FILEHEADER_SIZE 14</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="bmp_8h.html#ab65bd4185ac782900342afefb5453284">   22</a></span><span class="preprocessor">#define BMP_INFOHEADER_SIZE 40</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="bmp_8h.html#aa829d010d6d84885ecb641577ba94516">   24</a></span><span class="preprocessor">#define BMP_DEPTH_24BIT 24</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="bmp_8h.html#a121ab772be5c134c3c75c2e6f4ca0e9e">   26</a></span><span class="preprocessor">#define BMP_DEPTH_32BIT 32</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="bmp_8h.html#ae9863d150f9adbe8038313490605de2e">   28</a></span><span class="preprocessor">#define BMP_COMPRESSION_BI_RGB 0</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="bmp_8h.html#ab706e34bddf2a1a28ab8aebbbb43bfd7">   30</a></span><span class="preprocessor">#define BMP_WAY_BOTTOM2TOP 0</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="bmp_8h.html#a65e4c6681419c93bfc19e075b7a66d7e">   32</a></span><span class="preprocessor">#define BMP_WAY_TOP2BOTTOM -1</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct___b_m_p.html">   37</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct___b_m_p.html">_BMP</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct___b_m_p.html#afcf237de11ae2d8ef654a339c530ca34">   38</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> <a class="code hl_variable" href="struct___b_m_p.html#afcf237de11ae2d8ef654a339c530ca34">fileSize</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct___b_m_p.html#af3a5178455c8603b1b8c2b61a46272ff">   39</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> <a class="code hl_variable" href="struct___b_m_p.html#af3a5178455c8603b1b8c2b61a46272ff">offset</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct___b_m_p.html#a051d47310856b26b3cd1add7ae7c687b">   40</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> <a class="code hl_variable" href="struct___b_m_p.html#a051d47310856b26b3cd1add7ae7c687b">headerSize</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct___b_m_p.html#acbf065aa4dfaf25ecbf0ae9f447a231f">   41</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code hl_variable" href="struct___b_m_p.html#acbf065aa4dfaf25ecbf0ae9f447a231f">way</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="struct___b_m_p.html#a6285bb1b536ce5272b8bbbf5603d7cb0">   42</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> <a class="code hl_variable" href="struct___b_m_p.html#a6285bb1b536ce5272b8bbbf5603d7cb0">width</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct___b_m_p.html#a729f31f641aa601ff939b72d778423bd">   43</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> <a class="code hl_variable" href="struct___b_m_p.html#a729f31f641aa601ff939b72d778423bd">height</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct___b_m_p.html#a9e8a9a6718506180ed3f4451f5a8503d">   44</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a> <a class="code hl_variable" href="struct___b_m_p.html#a9e8a9a6718506180ed3f4451f5a8503d">depth</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="struct___b_m_p.html#a8106053423d539d93b6959f08e42a26f">   45</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> <a class="code hl_variable" href="struct___b_m_p.html#a8106053423d539d93b6959f08e42a26f">compType</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="struct___b_m_p.html#a847d4d221134b674c023b4cb5c60a092">   46</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> <a class="code hl_variable" href="struct___b_m_p.html#a847d4d221134b674c023b4cb5c60a092">dataSize</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="struct___b_m_p.html#a1e246a956da06bf30a8e271860b5817a">   47</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> <a class="code hl_variable" href="struct___b_m_p.html#a1e246a956da06bf30a8e271860b5817a">xPPM</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="struct___b_m_p.html#aded52e4614f314e4937e25f88d00833f">   48</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> <a class="code hl_variable" href="struct___b_m_p.html#aded52e4614f314e4937e25f88d00833f">yPPM</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="struct___b_m_p.html#a1d76bad45a3fdb92c3f55d18e2a25c08">   49</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> <a class="code hl_variable" href="struct___b_m_p.html#a1d76bad45a3fdb92c3f55d18e2a25c08">pallets</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="struct___b_m_p.html#a2e0411dac9508d70c6df66f0337c28a1">   50</a></span>    <a class="code hl_typedef" href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> <a class="code hl_variable" href="struct___b_m_p.html#a2e0411dac9508d70c6df66f0337c28a1">impPallet</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct___b_m_p.html#a212bf22814f3b0735bfd8d7391371dea">   51</a></span>    <span class="keywordtype">void</span>* <a class="code hl_variable" href="struct___b_m_p.html#a212bf22814f3b0735bfd8d7391371dea">imageData</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="bmp_8h.html#a044ed3d199f31bda2921c232921f49ab">   56</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct___b_m_p.html">_BMP</a> <a class="code hl_struct" href="struct___b_m_p.html">BMP</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> <span class="keyword">struct </span><a class="code hl_function" href="bmp_8h.html#a044ed3d199f31bda2921c232921f49ab">__attribute__</a> ((__packed__)) _BMPFileHeader {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">char</span> bfType[2];</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> bfSize;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_typedef" href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a> bfReserved1;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_typedef" href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a> bfReserved2;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> bfOffBits;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="bmp_8h.html#abacd68dedc55d7e50605ede8dc7714b7">   71</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>_BMPFileHeader <a class="code hl_typedef" href="bmp_8h.html#abacd68dedc55d7e50605ede8dc7714b7">BMPFileHeader</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">struct </span><a class="code hl_function" href="bmp_8h.html#a044ed3d199f31bda2921c232921f49ab">__attribute__</a> ((__packed__)) _BMPInfoHeaderWB {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> bcSize;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> bcWidth;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> bcHeight;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_typedef" href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a> bcPlanes;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_typedef" href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a> bcBitCount;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> biCompression;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> biSizeImage;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> biXPixPerMeter;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> biYPixPerMeter;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> biClrUsed;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> biClrImportant;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="bmp_8h.html#a92b2a93eb27ca2eb37b924b0cc89998e">   92</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>_BMPInfoHeaderWB <a class="code hl_typedef" href="bmp_8h.html#a92b2a93eb27ca2eb37b924b0cc89998e">BMPInfoHeaderWB</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keyword">struct </span><a class="code hl_function" href="bmp_8h.html#a044ed3d199f31bda2921c232921f49ab">__attribute__</a> ((__packed__)) _BMPInfoHeaderOS2 {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_typedef" href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> bcSize;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_typedef" href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a> bcWidth;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_typedef" href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a> bcHeight;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_typedef" href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a> bcPlanes;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_typedef" href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a> bcBitCount;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>};</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="bmp_8h.html#a6fb1b64ee1bc691e5d2f501611737e4f">  107</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>_BMPInfoHeaderOS2 <a class="code hl_typedef" href="bmp_8h.html#a6fb1b64ee1bc691e5d2f501611737e4f">BMPInfoHeaderOS2</a>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><a class="code hl_struct" href="struct___b_m_p.html">BMP</a>* <a class="code hl_function" href="bmp_8h.html#a61b6eea28b57bda1e3d90929467b5879">BMP_new</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keywordtype">void</span> <a class="code hl_function" href="bmp_8h.html#a98a7d69f019f9900faec7a6fd906f58b">BMP_init</a>(<a class="code hl_struct" href="struct___b_m_p.html">BMP</a>* bmp);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><a class="code hl_struct" href="struct___b_m_p.html">BMP</a>* <a class="code hl_function" href="bmp_8h.html#ae236629135ad165d538389e4292cc5db">BMP_importFromStream</a>(<a class="code hl_struct" href="struct___i_o_buffer.html">IOBuffer</a>* buf);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><a class="code hl_struct" href="struct___i_o_buffer.html">IOBuffer</a>* <a class="code hl_function" href="bmp_8h.html#a2c98f3616276230e145193bdd566c964">BMP_exportToStream</a>(<a class="code hl_struct" href="struct___b_m_p.html">BMP</a>* bmp);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><a class="code hl_struct" href="struct___b_m_p.html">BMP</a>* <a class="code hl_function" href="bmp_8h.html#a7a2baad47effdc4c50ee96b6e2d56fbb">BMP_importFromPixels</a>(<a class="code hl_struct" href="struct___pixels.html">Pixels</a>* pix);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><a class="code hl_struct" href="struct___pixels.html">Pixels</a>* <a class="code hl_function" href="bmp_8h.html#af74faa07f6bacf3aae565223b84e5893">BMP_exportToPixels</a>(<a class="code hl_struct" href="struct___b_m_p.html">BMP</a>* bmp);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="keywordtype">void</span> <a class="code hl_function" href="bmp_8h.html#a3172b9d0656aa662357d125f28300262">BMP_free</a>(<a class="code hl_struct" href="struct___b_m_p.html">BMP</a>* bmp);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="keywordtype">void</span> <a class="code hl_function" href="bmp_8h.html#ac97bd5da3f104ed21ea121c08c9c39c3">BMP_print</a>(<a class="code hl_struct" href="struct___b_m_p.html">BMP</a>* bmp);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abmp_8h_html_a044ed3d199f31bda2921c232921f49ab"><div class="ttname"><a href="bmp_8h.html#a044ed3d199f31bda2921c232921f49ab">__attribute__</a></div><div class="ttdeci">struct __attribute__((__packed__)) _BMPFileHeader</div><div class="ttdoc">ビットマップファイルヘッダの構造体</div><div class="ttdef"><b>Definition:</b> bmp.h:61</div></div>
+<div class="ttc" id="abmp_8h_html_a2c98f3616276230e145193bdd566c964"><div class="ttname"><a href="bmp_8h.html#a2c98f3616276230e145193bdd566c964">BMP_exportToStream</a></div><div class="ttdeci">IOBuffer * BMP_exportToStream(BMP *bmp)</div><div class="ttdoc">ビットマップ型をビットマップファイル用のIOBufferに変換</div><div class="ttdef"><b>Definition:</b> bmp.c:57</div></div>
+<div class="ttc" id="abmp_8h_html_a3172b9d0656aa662357d125f28300262"><div class="ttname"><a href="bmp_8h.html#a3172b9d0656aa662357d125f28300262">BMP_free</a></div><div class="ttdeci">void BMP_free(BMP *bmp)</div><div class="ttdoc">ビットマップのデストラクタ</div><div class="ttdef"><b>Definition:</b> bmp.c:142</div></div>
+<div class="ttc" id="abmp_8h_html_a61b6eea28b57bda1e3d90929467b5879"><div class="ttname"><a href="bmp_8h.html#a61b6eea28b57bda1e3d90929467b5879">BMP_new</a></div><div class="ttdeci">BMP * BMP_new(void)</div><div class="ttdoc">ビットマップのコンストラクタ</div><div class="ttdef"><b>Definition:</b> bmp.c:16</div></div>
+<div class="ttc" id="abmp_8h_html_a6fb1b64ee1bc691e5d2f501611737e4f"><div class="ttname"><a href="bmp_8h.html#a6fb1b64ee1bc691e5d2f501611737e4f">BMPInfoHeaderOS2</a></div><div class="ttdeci">struct _BMPInfoHeaderOS2 BMPInfoHeaderOS2</div><div class="ttdoc">ビットマップ情報ヘッダ(OS/2)型</div><div class="ttdef"><b>Definition:</b> bmp.h:107</div></div>
+<div class="ttc" id="abmp_8h_html_a7a2baad47effdc4c50ee96b6e2d56fbb"><div class="ttname"><a href="bmp_8h.html#a7a2baad47effdc4c50ee96b6e2d56fbb">BMP_importFromPixels</a></div><div class="ttdeci">BMP * BMP_importFromPixels(Pixels *pix)</div><div class="ttdoc">Pixels型からBMP型に変換</div><div class="ttdef"><b>Definition:</b> bmp.c:94</div></div>
+<div class="ttc" id="abmp_8h_html_a92b2a93eb27ca2eb37b924b0cc89998e"><div class="ttname"><a href="bmp_8h.html#a92b2a93eb27ca2eb37b924b0cc89998e">BMPInfoHeaderWB</a></div><div class="ttdeci">struct _BMPInfoHeaderWB BMPInfoHeaderWB</div><div class="ttdoc">ビットマップ情報ヘッダ(Windows Bitmap)型</div><div class="ttdef"><b>Definition:</b> bmp.h:92</div></div>
+<div class="ttc" id="abmp_8h_html_a98a7d69f019f9900faec7a6fd906f58b"><div class="ttname"><a href="bmp_8h.html#a98a7d69f019f9900faec7a6fd906f58b">BMP_init</a></div><div class="ttdeci">void BMP_init(BMP *bmp)</div><div class="ttdoc">ビットマップのイニシャライザ</div><div class="ttdef"><b>Definition:</b> bmp.c:22</div></div>
+<div class="ttc" id="abmp_8h_html_abacd68dedc55d7e50605ede8dc7714b7"><div class="ttname"><a href="bmp_8h.html#abacd68dedc55d7e50605ede8dc7714b7">BMPFileHeader</a></div><div class="ttdeci">struct _BMPFileHeader BMPFileHeader</div><div class="ttdoc">ビットマップファイルヘッダ型</div><div class="ttdef"><b>Definition:</b> bmp.h:71</div></div>
+<div class="ttc" id="abmp_8h_html_ac97bd5da3f104ed21ea121c08c9c39c3"><div class="ttname"><a href="bmp_8h.html#ac97bd5da3f104ed21ea121c08c9c39c3">BMP_print</a></div><div class="ttdeci">void BMP_print(BMP *bmp)</div><div class="ttdoc">ビットマップ内の情報を標準出力</div><div class="ttdef"><b>Definition:</b> bmp.c:253</div></div>
+<div class="ttc" id="abmp_8h_html_ae236629135ad165d538389e4292cc5db"><div class="ttname"><a href="bmp_8h.html#ae236629135ad165d538389e4292cc5db">BMP_importFromStream</a></div><div class="ttdeci">BMP * BMP_importFromStream(IOBuffer *buf)</div><div class="ttdoc">IOBuffer型からビットマップ型を返す</div><div class="ttdef"><b>Definition:</b> bmp.c:40</div></div>
+<div class="ttc" id="abmp_8h_html_af74faa07f6bacf3aae565223b84e5893"><div class="ttname"><a href="bmp_8h.html#af74faa07f6bacf3aae565223b84e5893">BMP_exportToPixels</a></div><div class="ttdeci">Pixels * BMP_exportToPixels(BMP *bmp)</div><div class="ttdoc">BMP型からPixels型に変換</div><div class="ttdef"><b>Definition:</b> bmp.c:130</div></div>
+<div class="ttc" id="aiobuffer_8h_html"><div class="ttname"><a href="iobuffer_8h.html">iobuffer.h</a></div><div class="ttdoc">入出力用バッファクラスのパブリックメソッド</div></div>
+<div class="ttc" id="apixels_8h_html"><div class="ttname"><a href="pixels_8h.html">pixels.h</a></div></div>
+<div class="ttc" id="astruct___b_m_p_html"><div class="ttname"><a href="struct___b_m_p.html">_BMP</a></div><div class="ttdoc">ビットマップの構造体</div><div class="ttdef"><b>Definition:</b> bmp.h:37</div></div>
+<div class="ttc" id="astruct___b_m_p_html_a051d47310856b26b3cd1add7ae7c687b"><div class="ttname"><a href="struct___b_m_p.html#a051d47310856b26b3cd1add7ae7c687b">_BMP::headerSize</a></div><div class="ttdeci">int32 headerSize</div><div class="ttdef"><b>Definition:</b> bmp.h:40</div></div>
+<div class="ttc" id="astruct___b_m_p_html_a1d76bad45a3fdb92c3f55d18e2a25c08"><div class="ttname"><a href="struct___b_m_p.html#a1d76bad45a3fdb92c3f55d18e2a25c08">_BMP::pallets</a></div><div class="ttdeci">int32 pallets</div><div class="ttdef"><b>Definition:</b> bmp.h:49</div></div>
+<div class="ttc" id="astruct___b_m_p_html_a1e246a956da06bf30a8e271860b5817a"><div class="ttname"><a href="struct___b_m_p.html#a1e246a956da06bf30a8e271860b5817a">_BMP::xPPM</a></div><div class="ttdeci">int32 xPPM</div><div class="ttdef"><b>Definition:</b> bmp.h:47</div></div>
+<div class="ttc" id="astruct___b_m_p_html_a212bf22814f3b0735bfd8d7391371dea"><div class="ttname"><a href="struct___b_m_p.html#a212bf22814f3b0735bfd8d7391371dea">_BMP::imageData</a></div><div class="ttdeci">void * imageData</div><div class="ttdef"><b>Definition:</b> bmp.h:51</div></div>
+<div class="ttc" id="astruct___b_m_p_html_a2e0411dac9508d70c6df66f0337c28a1"><div class="ttname"><a href="struct___b_m_p.html#a2e0411dac9508d70c6df66f0337c28a1">_BMP::impPallet</a></div><div class="ttdeci">int32 impPallet</div><div class="ttdef"><b>Definition:</b> bmp.h:50</div></div>
+<div class="ttc" id="astruct___b_m_p_html_a6285bb1b536ce5272b8bbbf5603d7cb0"><div class="ttname"><a href="struct___b_m_p.html#a6285bb1b536ce5272b8bbbf5603d7cb0">_BMP::width</a></div><div class="ttdeci">int32 width</div><div class="ttdef"><b>Definition:</b> bmp.h:42</div></div>
+<div class="ttc" id="astruct___b_m_p_html_a729f31f641aa601ff939b72d778423bd"><div class="ttname"><a href="struct___b_m_p.html#a729f31f641aa601ff939b72d778423bd">_BMP::height</a></div><div class="ttdeci">int32 height</div><div class="ttdef"><b>Definition:</b> bmp.h:43</div></div>
+<div class="ttc" id="astruct___b_m_p_html_a8106053423d539d93b6959f08e42a26f"><div class="ttname"><a href="struct___b_m_p.html#a8106053423d539d93b6959f08e42a26f">_BMP::compType</a></div><div class="ttdeci">int32 compType</div><div class="ttdef"><b>Definition:</b> bmp.h:45</div></div>
+<div class="ttc" id="astruct___b_m_p_html_a847d4d221134b674c023b4cb5c60a092"><div class="ttname"><a href="struct___b_m_p.html#a847d4d221134b674c023b4cb5c60a092">_BMP::dataSize</a></div><div class="ttdeci">int32 dataSize</div><div class="ttdef"><b>Definition:</b> bmp.h:46</div></div>
+<div class="ttc" id="astruct___b_m_p_html_a9e8a9a6718506180ed3f4451f5a8503d"><div class="ttname"><a href="struct___b_m_p.html#a9e8a9a6718506180ed3f4451f5a8503d">_BMP::depth</a></div><div class="ttdeci">int16 depth</div><div class="ttdef"><b>Definition:</b> bmp.h:44</div></div>
+<div class="ttc" id="astruct___b_m_p_html_acbf065aa4dfaf25ecbf0ae9f447a231f"><div class="ttname"><a href="struct___b_m_p.html#acbf065aa4dfaf25ecbf0ae9f447a231f">_BMP::way</a></div><div class="ttdeci">int16 way</div><div class="ttdef"><b>Definition:</b> bmp.h:41</div></div>
+<div class="ttc" id="astruct___b_m_p_html_aded52e4614f314e4937e25f88d00833f"><div class="ttname"><a href="struct___b_m_p.html#aded52e4614f314e4937e25f88d00833f">_BMP::yPPM</a></div><div class="ttdeci">int32 yPPM</div><div class="ttdef"><b>Definition:</b> bmp.h:48</div></div>
+<div class="ttc" id="astruct___b_m_p_html_af3a5178455c8603b1b8c2b61a46272ff"><div class="ttname"><a href="struct___b_m_p.html#af3a5178455c8603b1b8c2b61a46272ff">_BMP::offset</a></div><div class="ttdeci">int32 offset</div><div class="ttdef"><b>Definition:</b> bmp.h:39</div></div>
+<div class="ttc" id="astruct___b_m_p_html_afcf237de11ae2d8ef654a339c530ca34"><div class="ttname"><a href="struct___b_m_p.html#afcf237de11ae2d8ef654a339c530ca34">_BMP::fileSize</a></div><div class="ttdeci">int32 fileSize</div><div class="ttdef"><b>Definition:</b> bmp.h:38</div></div>
+<div class="ttc" id="astruct___i_o_buffer_html"><div class="ttname"><a href="struct___i_o_buffer.html">_IOBuffer</a></div><div class="ttdoc">I/Oバッファの構造体</div><div class="ttdef"><b>Definition:</b> iobuffer.h:17</div></div>
+<div class="ttc" id="astruct___pixels_html"><div class="ttname"><a href="struct___pixels.html">_Pixels</a></div><div class="ttdef"><b>Definition:</b> pixels.h:14</div></div>
+<div class="ttc" id="atypedefs_8h_html"><div class="ttname"><a href="typedefs_8h.html">typedefs.h</a></div><div class="ttdoc">共用変数＆定数の定義</div></div>
+<div class="ttc" id="atypedefs_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="typedefs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdoc">4バイト(32ビット)の符号なし整数</div><div class="ttdef"><b>Definition:</b> typedefs.h:45</div></div>
+<div class="ttc" id="atypedefs_8h_html_a2e00abb078d312d1d8c4fbcd6be343d8"><div class="ttname"><a href="typedefs_8h.html#a2e00abb078d312d1d8c4fbcd6be343d8">uint16</a></div><div class="ttdeci">unsigned short int uint16</div><div class="ttdoc">2バイト(16ビット)の符号なし整数</div><div class="ttdef"><b>Definition:</b> typedefs.h:41</div></div>
+<div class="ttc" id="atypedefs_8h_html_a56f1a81c92849566ae864511088eb7e8"><div class="ttname"><a href="typedefs_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a></div><div class="ttdeci">int int32</div><div class="ttdoc">4バイト(32ビット)の符号付き整数</div><div class="ttdef"><b>Definition:</b> typedefs.h:29</div></div>
+<div class="ttc" id="atypedefs_8h_html_adf957e9fa8c95c188ffacb8197aa8725"><div class="ttname"><a href="typedefs_8h.html#adf957e9fa8c95c188ffacb8197aa8725">int16</a></div><div class="ttdeci">short int int16</div><div class="ttdoc">2バイト(16ビット)の符号付き整数</div><div class="ttdef"><b>Definition:</b> typedefs.h:25</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['bgr_5finit_0',['BGR_init',['../units_8c.html#a538ef1e6022aa1d87c0928be3ca528b6',1,'BGR_init(BGR *bgr):&#160;units.c'],['../units_8h.html#a538ef1e6022aa1d87c0928be3ca528b6',1,'BGR_init(BGR *bgr):&#160;units.c']]],
+  ['bgr_5fnew_1',['BGR_new',['../units_8c.html#aba36d02ac9228bbd339994600d5864b6',1,'BGR_new(void):&#160;units.c'],['../units_8h.html#aba36d02ac9228bbd339994600d5864b6',1,'BGR_new(void):&#160;units.c']]],
+  ['bgr_5ftobgra_2',['BGR_toBGRA',['../units_8c.html#a99d5bcbd8cca9176db7b10f9b5487304',1,'BGR_toBGRA(BGR *bgr, BGRA *bgra):&#160;units.c'],['../units_8h.html#a99d5bcbd8cca9176db7b10f9b5487304',1,'BGR_toBGRA(BGR *bgr, BGRA *bgra):&#160;units.c']]],
+  ['bgr_5ftofargb_3',['BGR_tofARGB',['../units_8c.html#ac2d6788dec7589b5a51ac71a576d369a',1,'BGR_tofARGB(BGR *bgr, fARGB *fargb):&#160;units.c'],['../units_8h.html#ac2d6788dec7589b5a51ac71a576d369a',1,'BGR_tofARGB(BGR *bgr, fARGB *fargb):&#160;units.c']]],
+  ['bgr_5ftogray_4',['BGR_toGray',['../units_8c.html#a7aecfcfa086ac74175719e719c330c08',1,'BGR_toGray(BGR *bgr):&#160;units.c'],['../units_8h.html#a7aecfcfa086ac74175719e719c330c08',1,'BGR_toGray(BGR *bgr):&#160;units.c']]],
+  ['bgra_5finit_5',['BGRA_init',['../units_8c.html#aa2ea5b6ea2a8d27e63690a04b043ef10',1,'BGRA_init(BGRA *bgra):&#160;units.c'],['../units_8h.html#aa2ea5b6ea2a8d27e63690a04b043ef10',1,'BGRA_init(BGRA *bgra):&#160;units.c']]],
+  ['bgra_5fnew_6',['BGRA_new',['../units_8c.html#ab36dca3f1141382dd2da31ee7e5209a1',1,'BGRA_new(void):&#160;units.c'],['../units_8h.html#ab36dca3f1141382dd2da31ee7e5209a1',1,'BGRA_new(void):&#160;units.c']]],
+  ['bgra_5ftobgr_7',['BGRA_toBGR',['../units_8c.html#ac5d0476c7efed96ce4431007b30bc085',1,'BGRA_toBGR(BGRA *bgra, BGR *bgr):&#160;units.c'],['../units_8h.html#ac5d0476c7efed96ce4431007b30bc085',1,'BGRA_toBGR(BGRA *bgra, BGR *bgr):&#160;units.c']]],
+  ['bgra_5ftofargb_8',['BGRA_tofARGB',['../units_8c.html#a1c94391c4289b39c9d50315f3a647fb1',1,'BGRA_tofARGB(BGRA *bgra, fARGB *fargb):&#160;units.c'],['../units_8h.html#a1c94391c4289b39c9d50315f3a647fb1',1,'BGRA_tofARGB(BGRA *bgra, fARGB *fargb):&#160;units.c']]],
+  ['bgra_5ftogray_9',['BGRA_toGray',['../units_8c.html#aa9a954756b81eb7763725ebfd38cd7b1',1,'BGRA_toGray(BGRA *bgra):&#160;units.c'],['../units_8h.html#aa9a954756b81eb7763725ebfd38cd7b1',1,'BGRA_toGray(BGRA *bgra):&#160;units.c']]],
+  ['bmp_5fexporttopixels_10',['BMP_exportToPixels',['../bmp_8c.html#af74faa07f6bacf3aae565223b84e5893',1,'BMP_exportToPixels(BMP *bmp):&#160;bmp.c'],['../bmp_8h.html#af74faa07f6bacf3aae565223b84e5893',1,'BMP_exportToPixels(BMP *bmp):&#160;bmp.c']]],
+  ['bmp_5fexporttostream_11',['BMP_exportToStream',['../bmp_8c.html#a2c98f3616276230e145193bdd566c964',1,'BMP_exportToStream(BMP *bmp):&#160;bmp.c'],['../bmp_8h.html#a2c98f3616276230e145193bdd566c964',1,'BMP_exportToStream(BMP *bmp):&#160;bmp.c']]],
+  ['bmp_5ffree_12',['BMP_free',['../bmp_8c.html#a3172b9d0656aa662357d125f28300262',1,'BMP_free(BMP *bmp):&#160;bmp.c'],['../bmp_8h.html#a3172b9d0656aa662357d125f28300262',1,'BMP_free(BMP *bmp):&#160;bmp.c']]],
+  ['bmp_5fimportfrompixels_13',['BMP_importFromPixels',['../bmp_8c.html#a7a2baad47effdc4c50ee96b6e2d56fbb',1,'BMP_importFromPixels(Pixels *pix):&#160;bmp.c'],['../bmp_8h.html#a7a2baad47effdc4c50ee96b6e2d56fbb',1,'BMP_importFromPixels(Pixels *pix):&#160;bmp.c']]],
+  ['bmp_5fimportfromstream_14',['BMP_importFromStream',['../bmp_8c.html#ae236629135ad165d538389e4292cc5db',1,'BMP_importFromStream(IOBuffer *buf):&#160;bmp.c'],['../bmp_8h.html#ae236629135ad165d538389e4292cc5db',1,'BMP_importFromStream(IOBuffer *buf):&#160;bmp.c']]],
+  ['bmp_5finit_15',['BMP_init',['../bmp_8c.html#a98a7d69f019f9900faec7a6fd906f58b',1,'BMP_init(BMP *bmp):&#160;bmp.c'],['../bmp_8h.html#a98a7d69f019f9900faec7a6fd906f58b',1,'BMP_init(BMP *bmp):&#160;bmp.c']]],
+  ['bmp_5fnew_16',['BMP_new',['../bmp_8c.html#a61b6eea28b57bda1e3d90929467b5879',1,'BMP_new(void):&#160;bmp.c'],['../bmp_8h.html#a61b6eea28b57bda1e3d90929467b5879',1,'BMP_new(void):&#160;bmp.c']]],
+  ['bmp_5fprint_17',['BMP_print',['../bmp_8c.html#ac97bd5da3f104ed21ea121c08c9c39c3',1,'BMP_print(BMP *bmp):&#160;bmp.c'],['../bmp_8h.html#ac97bd5da3f104ed21ea121c08c9c39c3',1,'BMP_print(BMP *bmp):&#160;bmp.c']]]
+];
