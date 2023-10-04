@@ -6,31 +6,23 @@
 #ifndef CONSOLE_H
 #define CONSOLE_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 #include "../common.h"
-
-/// コンソールウィンドウのX座標の初期値
-#define CONSOLE_WIN_INIT_X 0
-
-/// コンソールウィンドウのY座標の初期値
-#define CONSOLE_WIN_INIT_Y 0
 
 /* エスケープコード */
 #define ESC "\x1b["
 
 /* 色定義 */
-#define ESC_CLR_BLACK   0 //黒
-#define ESC_CLR_RED     1 //赤
-#define ESC_CLR_GREEN   2 //緑
-#define ESC_CLR_YELLOW  3 //黄
-#define ESC_CLR_BLUE    4 //青
-#define ESC_CLR_MZENDA  5 //赤紫（マゼンタ）
-#define ESC_CLR_CYAN    6 //水色（シアン）
-#define ESC_CLR_WHITE   7 //白
-#define ESC_CLR_STDCLR  9 //標準色
+typedef enum {
+    CWC_BLACK  = 0, //黒
+    CWC_RED    = 1, //赤
+    CWC_GREEN  = 2, //緑
+    CWC_YELLOW = 3, //黄
+    CWC_BLUE   = 4, //青
+    CWC_MZENDA = 5, //赤紫（マゼンタ）
+    CWC_CYAN   = 6, //水色（シアン）
+    CWC_WHITE  = 7, //白
+    CWC_STDCLR = 9, //標準色
+} CWColor;
 
 /* 属性定義 */
 #define ESC_MODE_RESET   0 //属性リセット
@@ -72,62 +64,27 @@ void ESC_print(char* str, int fClr, int bClr, int mode)
     return;
 }
 */
-/**
- * コンソールウィンドウの構造体クラス
-*/
-typedef struct {
-    uint16 x;
-    uint16 y;
-    uint16 width;
-    uint16 height;
-    uint8 frame[8];
-    uint8* text;
-} ConsoleWindow;
+#define ESC_clearScreen() (printf("\x1b[2J"))
+#define ESC_clearCur2End() (printf("\x1b[K"))
+#define ESC_upCur(n) (printf("\x1b[%1dA",n))
+#define ESC_downCur(n) (printf("\x1b[%1dB",n))
+#define ESC_rightCur(n) (printf("\x1b[%1dC",n))
+#define ESC_leftCur(n) (printf("\x1b[%1dD",n))
+#define ESC_downFirstCur(n) (printf("\x1b[%1dE",n))
+#define ESC_upLastCur(n) (printf("\x1b[%1dF",n))
+#define ESC_movColCur(x) (printf("\x1b[%1dG",x))
+#define ESC_moveCur(x,y) (printf("\x1b[%1d;%1dH",y+1,x+1))
+#define ESC_invisibleCur() (printf("\x1b[>5h"))
+#define ESC_visibleCur() (printf("\x1b[>5l"))
 
-/**
- * コンソールウィンドウのコンストラクタ
- * @param[in] width ウィンドウの幅
- * @param[in] height ウィンドウの高さ
- * @return ConsoleWindow* コンソールウィンドウインスタンス
- */
-ConsoleWindow* ConsoleWindow_new(int width, int height);
-/**
- * コンソールウィンドウのイニシャライザ
- * @param[in] win ConsoleWindow型のポインタ
- * @param[in] x ウィンドウのX座標
- * @param[in] y ウィンドウのY座標
- * @param[in] width ウィンドウの幅
- * @param[in] height ウィンドウの高さ
- * @return なし
- */
-void ConsoleWindow_init(ConsoleWindow* win, int x, int y, int width, int height);
-/**
- * コンソールウィンドウのデストラクタ
- * @param[in] win ConsoleWindow型のポインタ
- * @return なし
- */
-void ConsoleWindow_free(ConsoleWindow* win);
-/**
- * コンソールウィンドウ内の情報を標準出力
- * @param[in] win ConsoleWindow型のポインタ
- * @return なし
- */
-void ConsoleWindow_print(ConsoleWindow* win);
+/* 文字強調 */
+#define ESC_clearAttr() (printf("\x1b[0m"))
+#define ESC_strongAttr() (printf("\x1b[1m"))
+#define ESC_underlineAttr() (printf("\x1b[4m"))
+#define ESC_reverAttr() (printf("\x1b[7m"))
+#define ESC_fColorAttr(c) (printf("\x1b[3%1dm",c))
+#define ESC_bColorAttr(c) (printf("\x1b[4%1dm",c))
+#define ESC_setMode(m) (printf("\x1b[%1dm", m))
 
-
-/**
- * コンソールウィンドウの移動
- * @param[in] win ConsoleWindow型のポインタ
- * @param[in] x 移動方向のX座標
- * @param[in] y 移動方向のY座標
- * @return なし
-*/
-void ConsoleWindow_move(ConsoleWindow* win, int x, int y);
-/**
- * コンソールウィンドウの表示
- * @param[in] win ConsoleWindow型のポインタ
- * @return なし
-*/
-void ConsoleWindow_show(ConsoleWindow* win);
 
 #endif

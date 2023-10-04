@@ -5,11 +5,11 @@
 int main()
 {
     printf("\x1b[2J");
-    ConsoleWindow* win = ConsoleWindow_new(9, 3);
-    ConsoleWindow_move(win, 3, 5);
+    ConsoleWindow* win = ConsoleWindow_new(80, 24);
+    //ConsoleWindow_move(win, 3, 5);
 
     ConsoleWindow_show(win);
-    while(getchar() != ' ');
+    while(getch(false) != ' ');
     ConsoleWindow_free(win);
     return TRUE;
 }

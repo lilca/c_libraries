@@ -1,57 +1,25 @@
 /**
  * コンソールウィンドウクラスのソース
- * @file
+ * @fileS
  */
-#include "console.h"
+#include "console_window.h"
 
-#define ESC_clearScreen() (printf("\x1b[2J"))
-#define ESC_clearCur2End() (printf("\x1b[K"))
-#define ESC_upCur(n) (printf("\x1b[%1dA",n))
-#define ESC_downCur(n) (printf("\x1b[%1dB",n))
-#define ESC_rightCur(n) (printf("\x1b[%1dC",n))
-#define ESC_leftCur(n) (printf("\x1b[%1dD",n))
-#define ESC_downFirstCur(n) (printf("\x1b[%1dE",n))
-#define ESC_upLastCur(n) (printf("\x1b[%1dF",n))
-#define ESC_movColCur(x) (printf("\x1b[%1dG",x))
-#define ESC_moveCur(x,y) (printf("\x1b[%1d;%1dH",y+1,x+1))
-#define ESC_invisibleCur() (printf("\x1b[>5h"))
-#define ESC_visibleCur() (printf("\x1b[>5l"))
-
-/* 文字強調 */
-#define ESC_clearAttr() (printf("\x1b[0m"))
-#define ESC_strongAttr() (printf("\x1b[1m"))
-#define ESC_underlineAttr() (printf("\x1b[4m"))
-#define ESC_reverAttr() (printf("\x1b[7m"))
-#define ESC_fColorAttr(c) (printf("\x1b[3%1dm",c))
-#define ESC_bColorAttr(c) (printf("\x1b[4%1dm",c))
-#define ESC_setMode(m) (printf("\x1b[%1dm", m))
-
-/* フレーム位置 */
-#define FRAME_TOP       0
-#define FRAME_LEFT      1
-#define FRAME_BOTTOM    2
-#define FRAME_RIGHT     3
-#define FRAME_CORNOR_TL 4
-#define FRAME_CORNOR_BL 5
-#define FRAME_CORNOR_BR 6
-#define FRAME_CORNOR_TR 7
 
 /// コンソールウィンドウのフレームの初期値
-const uint8 CONSOLE_WIN_INIT_FRAME[] = {'=', '|', '-', '@', '*', '\\', '/', '>'};
-
+CWFrame CONSOLE_WIN_INIT_FRAME = {'-', 'o', '/', '*', ' ', 'a', '\\', 'C'};
 
 ConsoleWindow* ConsoleWindow_new(int width, int height) {
     ConsoleWindow* res = malloc(sizeof(ConsoleWindow));
-    ConsoleWindow_init(res, 0, 0, width, height);
+    res->width = width;
+    res->height = height;
+    ConsoleWindow_init(res, 0, 0);
     return res;
 }
 
-void ConsoleWindow_init(ConsoleWindow* win, int x , int y, int width, int height) {
+void ConsoleWindow_init(ConsoleWindow* win, int x , int y) {
     win->x = x;
     win->y = y;
-    win->width = width;
-    win->height = height;
-    memcpy(win->frame, CONSOLE_WIN_INIT_FRAME, 8);
+    memcpy(&(win->frame), &CONSOLE_WIN_INIT_FRAME, sizeof(CWFrame));
     win->text = (uint8*)malloc(win->width * win->height);
     for (int idx=0; idx<win->width * win->height; idx++) {
         win->text[idx] = ' ';
@@ -97,40 +65,50 @@ void ConsoleWindow_show(ConsoleWindow* win) {
         // Top
         if (win->text[idx] == ' ') {
             ESC_moveCur(win->x+idx, win->y);
-            putchar(win->frame[FRAME_TOP]);
+            putchar(win->frame.top);
         }
         // Bottom
         if (win->text[idx + (win->height-1) * win->width] == ' ') {
             ESC_moveCur(win->x+idx, win->y+win->height-1);
-            putchar(win->frame[FRAME_BOTTOM]);
+            putchar(win->frame.bottom);
         }
     }
     for (int idx=0; idx<win->height; idx++) {
         // Left
         if (win->text[idx*win->height] == ' ') {
             ESC_moveCur(win->x, win->y+idx);
-            putchar(win->frame[FRAME_LEFT]);
+            putchar(win->frame.left);
         }
         // Right
         if (win->text[idx*win->height + (win->width-1)] == ' ') {
             ESC_moveCur(win->x+win->width-1, win->y+idx);
-            putchar(win->frame[FRAME_RIGHT]);
+            putchar(win->frame.right);
         }
     }
     if (win->text[0] == ' ') {
         ESC_moveCur(win->x, win->y);
-        putchar(win->frame[FRAME_CORNOR_TL]);
+        putchar(win->frame.topLeft);
     }
     if (win->text[win->width-1] == ' ') {
         ESC_moveCur(win->x+win->width-1, win->y);
-        putchar(win->frame[FRAME_CORNOR_TR]);
+        putchar(win->frame.topRight);
     }
     if (win->text[(win->height-1) * win->width] == ' ') {
         ESC_moveCur(win->x, win->y+win->height-1);
-        putchar(win->frame[FRAME_CORNOR_BL]);
+        putchar(win->frame.bottomLeft);
     }
     if (win->text[(win->height-1) * win->width+ win->width-1] == ' ') {
         ESC_moveCur(win->x+win->width-1, win->y+win->height-1);
-        putchar(win->frame[FRAME_CORNOR_BR]);
+        putchar(win->frame.bottomRight);
     }
+    return;
 }
+
+void ConsoleWindow_addField(ConsoleWindow* win, CWField* field) {
+    if (MAX_OF_CW_FIELD <= win->fields)
+        return;
+    win->fieldList[win->fields] = field;
+    win->field += 1;
+    return;
+}
+
