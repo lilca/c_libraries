@@ -2,6 +2,8 @@
  * コンソールウィンドウクラスのソース
  * @fileS
  */
+#include <stdio.h>
+#include <string.h>
 #include "console_window.h"
 
 
@@ -49,6 +51,7 @@ void ConsoleWindow_print(ConsoleWindow* win) {
 void ConsoleWindow_move(ConsoleWindow* win, int x, int y) {
     win->x += x;
     win->y += y;
+    ESC_clearScreen();
     return;
 }
 
@@ -105,10 +108,17 @@ void ConsoleWindow_show(ConsoleWindow* win) {
 }
 
 void ConsoleWindow_addField(ConsoleWindow* win, CWField* field) {
-    if (MAX_OF_CW_FIELD <= win->fields)
+    int count = ConsoleWindow_countOfFields(win);
+    if (MAX_OF_CW_FIELD <= count)
         return;
-    win->fieldList[win->fields] = field;
-    win->field += 1;
+    win->fieldList[count] = field;
     return;
 }
 
+int ConsoleWindow_countOfFields(ConsoleWindow* win) {
+    for (int idx=0; idx<MAX_OF_CW_FIELD; idx++) {
+        if (win->fieldList[idx] == 0)
+            return idx;
+    }
+    return MAX_OF_CW_FIELD;
+}

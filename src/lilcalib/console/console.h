@@ -7,6 +7,7 @@
 #define CONSOLE_H
 
 #include "../common.h"
+#include "consoleio.h"
 
 /* エスケープコード */
 #define ESC "\x1b["
