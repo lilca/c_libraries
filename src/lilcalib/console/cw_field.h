@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <stdbool.h>
 #include "console.h"
 
@@ -46,7 +47,7 @@ typedef struct {
     uint16 x;
     uint16 y;
     uint16 len;
-    void* value;
+    char* value;
     CWFieldType type;
     CWAttr attr;
     int fColor;
@@ -82,5 +83,14 @@ void CWField_free(CWField* field);
  * @return なし
  */
 void CWField_print(CWField* field);
+
+/**
+ * コンソールウィンドウのフィールド内の情報を標準出力
+ * @param[in] field CWField型のポインタ
+ * @param[in] value 設定する値
+ * @return なし
+ */
+void CWField_setValue(CWField* field, const char* value);
+
 
 #endif

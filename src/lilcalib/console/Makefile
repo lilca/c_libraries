@@ -7,7 +7,7 @@ CC		= clang
 CFLAG	= -Wall -O2
 
 all: $(UTEST).o $(NAME).o cw_field.o consoleio.o
-	$(CC) -o $(UTEST) $(OBJ)/$(UTEST).o $(OBJ)/$(NAME).o $(OBJ)/consoleio.o
+	$(CC) -o $(UTEST) $(OBJ)/$(UTEST).o $(OBJ)/$(NAME).o $(OBJ)/consoleio.o $(OBJ)/cw_field.o
 
 $(UTEST).o: $(SRC)/$(UTEST).c $(SRC)/$(NAME).h
 	$(CC) $(CFLAG) -I $(INCLUDE) -c $(SRC)/$(UTEST).c -o $(OBJ)/$(UTEST).o

@@ -1,6 +1,6 @@
 /**
  * コンソールウィンドウクラスのソース
- * @fileS
+ * @file
  */
 #include <stdio.h>
 #include <string.h>
@@ -56,14 +56,15 @@ void ConsoleWindow_move(ConsoleWindow* win, int x, int y) {
 }
 
 void ConsoleWindow_show(ConsoleWindow* win) {
-    //
+    // BackGround
     for (int jdx=0; jdx<win->height; jdx++) {
         for (int idx=0; idx<win->width; idx++) {
             ESC_moveCur(win->x+idx, win->y+jdx);
             putchar(win->text[idx + jdx * win->width]);
         }
-    } 
-    // frame
+    }
+
+    // frames
     for (int idx=0; idx<win->width; idx++) {
         // Top
         if (win->text[idx] == ' ') {
@@ -104,6 +105,11 @@ void ConsoleWindow_show(ConsoleWindow* win) {
         ESC_moveCur(win->x+win->width-1, win->y+win->height-1);
         putchar(win->frame.bottomRight);
     }
+
+    // Fields
+    for (int idx=0; ConsoleWindow_countOfFields(win); idx++) {
+        ConsoleWindow_putField(win, idx);
+    }
     return;
 }
 
@@ -121,4 +127,11 @@ int ConsoleWindow_countOfFields(ConsoleWindow* win) {
             return idx;
     }
     return MAX_OF_CW_FIELD;
+}
+
+void ConsoleWindow_putField(ConsoleWindow* win, int fieldID) {
+    CWField* field = win->fieldList[fieldID];
+    ESC_moveCur(win->x + field->x, win->y + field->y);
+    putchar((int)(field->value[0]));
+    return;
 }

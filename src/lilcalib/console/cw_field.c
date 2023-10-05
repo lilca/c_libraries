@@ -1,6 +1,6 @@
 /**
  * コンソールウィンドウのフィールドのソース
- * @fileS
+ * @file
  */
 #include "cw_field.h"
 
@@ -33,4 +33,13 @@ void CWField_free(CWField* field) {
     return;
 }
 void CWField_print(CWField* field) {
+}
+
+void CWField_setValue(CWField* field, const char* value) {
+    if (field->value != NULL)
+        free(field->value);
+    int len = strlen(value);
+    field->value = malloc(len + 1);
+    strncpy(field->value, value, len+1);
+    return;
 }

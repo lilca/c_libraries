@@ -9,8 +9,11 @@ int main()
     ConsoleWindow* win = ConsoleWindow_new(80, 24);
     //ConsoleWindow_move(win, 3, 5);
 
+    CWField* field = CWField_new(0, 3, 5);
+    CWField_setValue(field, "test");
+    ConsoleWindow_addField(win, field);
     ConsoleWindow_show(win);
-    while(getch(false) != ' ');
     ConsoleWindow_free(win);
+    while(getch(false) != ' ');
     return TRUE;
 }
