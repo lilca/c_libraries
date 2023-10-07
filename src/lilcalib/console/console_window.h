@@ -87,31 +87,10 @@ void ConsoleWindow_show(ConsoleWindow* win);
 /**
  * コンソールウィンドウのフレーム変更（１種類）
  * @param[in] win ConsoleWindow型のポインタ
- * @param[in] chr フレーム文字
+ * @param[in] frame フレーム文字群
  * @return なし
 */
-void ConsoleWindow_setFrameAll(ConsoleWindow* win, char chr);
-/**
- * コンソールウィンドウのコーナー変更（１種類）
- * @param[in] win ConsoleWindow型のポインタ
- * @param[in] chr コーナー文字
- * @return なし
-*/
-void ConsoleWindow_setCornorAll(ConsoleWindow* win, char chr);
-/**
- * コンソールウィンドウのフレーム変更（個別）
- * @param[in] win ConsoleWindow型のポインタ
- * @param[in] chr フレーム文字列(上左下右)
- * @return なし
-*/
-void ConsoleWindow_setFrame(ConsoleWindow* win, char chr);
-/**
- * コンソールウィンドウのコーナー変更（個別）
- * @param[in] win ConsoleWindow型のポインタ
- * @param[in] chr コーナー文字
- * @return なし
-*/
-void ConsoleWindow_setCornor(ConsoleWindow* win, char chr);
+void ConsoleWindow_setFrame(ConsoleWindow* win, CWFrame frame);
 
 /**
  * コンソールウィンドウのコーナー変更（個別）

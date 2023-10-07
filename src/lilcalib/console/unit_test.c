@@ -6,6 +6,16 @@
 int main()
 {
     ConsoleWindow* win = ConsoleWindow_new(80, 24);
+    CWFrame frame;
+    frame.top = '-';
+    frame.left = '|';
+    frame.bottom = '-';
+    frame.right = '|';
+    frame.topLeft = '/';
+    frame.bottomRight = '/';
+    frame.topRight = '\\';
+    frame.bottomLeft = '\\';
+    ConsoleWindow_setFrame(win, frame);
 //    ConsoleWindow_move(win, 6, 2);
 
     CWField* field = CWField_new(0, 3, 5, "test");

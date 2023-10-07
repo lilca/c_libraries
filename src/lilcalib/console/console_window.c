@@ -112,6 +112,18 @@ void ConsoleWindow_show(ConsoleWindow* win) {
     return;
 }
 
+void ConsoleWindow_setFrame(ConsoleWindow* win, CWFrame frame) {
+    win->frame.top = frame.top;
+    win->frame.left = frame.left;
+    win->frame.bottom = frame.bottom;
+    win->frame.right = frame.right;
+    win->frame.topLeft = frame.topLeft;
+    win->frame.bottomLeft = frame.bottomLeft;
+    win->frame.bottomRight = frame.bottomRight;
+    win->frame.topRight = frame.topRight;
+}
+
+
 void ConsoleWindow_addField(ConsoleWindow* win, CWField* field) {
     int count = ConsoleWindow_countOfFields(win);
     if (MAX_OF_CW_FIELD <= count)
