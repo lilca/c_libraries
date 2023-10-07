@@ -6,7 +6,6 @@
 #include <string.h>
 #include "console_window.h"
 
-
 /// コンソールウィンドウのフレームの初期値
 CWFrame CONSOLE_WIN_INIT_FRAME = {'-', 'o', '/', '*', ' ', 'a', '\\', 'C'};
 
@@ -107,8 +106,8 @@ void ConsoleWindow_show(ConsoleWindow* win) {
     }
 
     // Fields
-    for (int idx=0; ConsoleWindow_countOfFields(win); idx++) {
-        ConsoleWindow_putField(win, idx);
+    for (int idx=0; idx<ConsoleWindow_countOfFields(win); idx++) {
+        CWField_putValue(win->fieldList[idx], win->x, win->y);
     }
     return;
 }
@@ -123,15 +122,8 @@ void ConsoleWindow_addField(ConsoleWindow* win, CWField* field) {
 
 int ConsoleWindow_countOfFields(ConsoleWindow* win) {
     for (int idx=0; idx<MAX_OF_CW_FIELD; idx++) {
-        if (win->fieldList[idx] == 0)
+        if (win->fieldList[idx] == NULL)
             return idx;
     }
     return MAX_OF_CW_FIELD;
-}
-
-void ConsoleWindow_putField(ConsoleWindow* win, int fieldID) {
-    CWField* field = win->fieldList[fieldID];
-    ESC_moveCur(win->x + field->x, win->y + field->y);
-    putchar((int)(field->value[0]));
-    return;
 }

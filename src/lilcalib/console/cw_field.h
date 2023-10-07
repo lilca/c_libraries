@@ -46,7 +46,8 @@ typedef struct {
     uint16 id;
     uint16 x;
     uint16 y;
-    uint16 len;
+    uint16 length;
+    char* defValue;
     char* value;
     CWFieldType type;
     CWAttr attr;
@@ -61,7 +62,7 @@ typedef struct {
  * @param[in] y フィールドのY座標
  * @return CWField* コンソールウィンドウインスタンス
  */
-CWField* CWField_new(int id, int x, int y);
+CWField* CWField_new(int id, int x, int y, const char* defValue);
 /**
  * コンソールウィンドウのフィールドのイニシャライザ
  * @param[in] field CWField型のポインタ
@@ -70,7 +71,7 @@ CWField* CWField_new(int id, int x, int y);
  * @param[in] value フィールドの幅
  * @return なし
  */
-void CWField_init(CWField* field, void* value);
+void CWField_init(CWField* field, const char* value);
 /**
  * コンソールウィンドウのフィールドのデストラクタ
  * @param[in] field CWField型のポインタ
@@ -85,12 +86,26 @@ void CWField_free(CWField* field);
 void CWField_print(CWField* field);
 
 /**
- * コンソールウィンドウのフィールド内の情報を標準出力
+ * コンソールウィンドウのフィールドのデフォルト値を設定
+ * @param[in] field CWField型のポインタ
+ * @param[in] defValue 設定するデフォルト値
+ * @return なし
+ */
+void CWField_setDefValue(CWField* field, const char* defValue);
+/**
+ * コンソールウィンドウのフィールドの値を設定
  * @param[in] field CWField型のポインタ
  * @param[in] value 設定する値
  * @return なし
  */
 void CWField_setValue(CWField* field, const char* value);
-
+/**
+ * コンソールウィンドウのフィールドを出力
+ * @param[in] field CWField型のポインタ
+ * @param[in] x 出力開始するX座標
+ * @param[in] y 出力開始するY座標
+ * @return なし
+ */
+void CWField_putValue(CWField* field, int x, int y);
 
 #endif

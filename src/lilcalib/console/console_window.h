@@ -125,12 +125,5 @@ void ConsoleWindow_addField(ConsoleWindow* win, CWField* field);
  * @return ウィンドウのフィールド数
 */
 int ConsoleWindow_countOfFields(ConsoleWindow* win);
-/**
- * コンソールウィンドウのフィールド出力
- * @param[in] win ConsoleWindow型のポインタ
- * @param[in] fieldID 出力するフィールドID
- * @return なし
-*/
-void ConsoleWindow_putField(ConsoleWindow* win, int fieldID);
 
 #endif

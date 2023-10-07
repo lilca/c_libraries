@@ -7,11 +7,17 @@ int main()
 {
     printf("\x1b[2J");
     ConsoleWindow* win = ConsoleWindow_new(80, 24);
-    //ConsoleWindow_move(win, 3, 5);
+//    ConsoleWindow_move(win, 6, 2);
 
-    CWField* field = CWField_new(0, 3, 5);
-    CWField_setValue(field, "test");
+    CWField* field = CWField_new(0, 3, 5, "test");
+    CWField_setValue(field, "ABV");
+//    CWField_putValue(field, 2, 2);
+//    CWField_free(field);
     ConsoleWindow_addField(win, field);
+    CWField* field2 = CWField_new(0, 3, 6, "yes!");
+    CWField_setValue(field, "ABV");
+    ConsoleWindow_addField(win, field2);
+//    printf("@%d@",ConsoleWindow_countOfFields(win));
     ConsoleWindow_show(win);
     ConsoleWindow_free(win);
     while(getch(false) != ' ');
