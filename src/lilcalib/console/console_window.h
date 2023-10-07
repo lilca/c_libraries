@@ -33,6 +33,7 @@ typedef struct {
     uint16 y;
     uint16 width;
     uint16 height;
+    uint16 focusFieldID;
     CWFrame frame;
     CWField* fieldList[MAX_OF_CW_FIELD];
     uint8* text;

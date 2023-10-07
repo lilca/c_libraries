@@ -34,9 +34,11 @@ typedef enum {
 */
 typedef struct {
     bool bold;
-    bool blink;
     bool italic;
+    bool blink;
     bool underLine;
+    bool reverse;
+    bool secret;
 } CWAttr;
 
 /**
