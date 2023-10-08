@@ -126,16 +126,16 @@ void ConsoleWindow_setFrame(ConsoleWindow* win, CWFrame frame) {
 
 void ConsoleWindow_addField(ConsoleWindow* win, CWField* field) {
     int count = ConsoleWindow_countOfFields(win);
-    if (MAX_OF_CW_FIELD <= count)
+    if (MAX_OF_CWIN_FIELDS <= count)
         return;
     win->fieldList[count] = field;
     return;
 }
 
 int ConsoleWindow_countOfFields(ConsoleWindow* win) {
-    for (int idx=0; idx<MAX_OF_CW_FIELD; idx++) {
+    for (int idx=0; idx<MAX_OF_CWIN_FIELDS; idx++) {
         if (win->fieldList[idx] == NULL)
             return idx;
     }
-    return MAX_OF_CW_FIELD;
+    return MAX_OF_CWIN_FIELDS;
 }

@@ -22,7 +22,7 @@
 #define CONSOLE_WIN_INIT_Y 0
 
 /// コンソールウィンドウの最大フィールド数
-#define MAX_OF_CW_FIELD 256
+#define MAX_OF_CWIN_FIELDS 256
 
 
 /**
@@ -35,7 +35,7 @@ typedef struct {
     uint16 height;
     uint16 focusFieldID;
     CWFrame frame;
-    CWField* fieldList[MAX_OF_CW_FIELD];
+    CWField* fieldList[MAX_OF_CWIN_FIELDS];
     uint8* text;
 } ConsoleWindow;
 

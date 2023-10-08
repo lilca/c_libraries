@@ -3,8 +3,8 @@
  * @file
  */
 
-#ifndef TYPEDEFS_H
-#define TYPEDEFS_H
+#ifndef LILCALIB_TYPEDEF_H
+#define LILCALIB_TYPEDEF_H
 
 /**
  * 真(TRUE)の定数と定義

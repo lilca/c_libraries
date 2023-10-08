@@ -3,9 +3,6 @@
  * @file
  */
 
-#ifndef COMMON_H
-#define COMMON_H
-
 #include "./common/typedefs.h"
+#include "./common/memory.h"
 
-#endif
