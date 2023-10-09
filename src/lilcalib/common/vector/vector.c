@@ -5,19 +5,23 @@
 
 #include "../vector.h"
 
-Vector* Vector_new() {
+Vector* Vector_new(void (*freeElement)(void* element)) {
     Vector* vector = malloc(sizeof(Vector));
     vector->list = malloc(sizeof(void*));
     vector->list[0] = NULL;
+    vector->freeElement = free;
     return vector;
 }
 void Vector_free(Vector* vector) {
     if (vector == NULL)
         return;
     if (vector->list != NULL) {
-        for (int idx=0; vector->list[idx] != NULL; idx++) 
-            if (vector->list[idx] != NULL)
-                freeNULL(vector->list[idx]);
+        for (int idx=0; idx<Vector_count(vector); idx++) {
+            if (vector->list[idx] != NULL) {
+                vector->freeElement(vector->list[idx]);
+                //freeNULL(vector->list[idx]);
+            }
+        }
     }
     freeNULL(vector->list);
     freeNULL(vector);
@@ -37,6 +41,7 @@ void Vector_add(Vector* vector, void* ele) {
     int len = Vector_count(vector);
     vector->list = realloc(vector->list, sizeof(void*) * (len +1/*終端子分*/ +1/*追加分*/));
     vector->list[len] = ele;
+    vector->list[len+1] = NULL;
     return;
 }
 void Vector_remove(Vector* vector, int index) {
@@ -46,10 +51,11 @@ void Vector_remove(Vector* vector, int index) {
     if (len < index)
         return;
     // Remove
-    for (int idx=0; vector->list[idx] != NULL; idx++) {
+    for (int idx=0; idx<Vector_count(vector); idx++) {
         if (idx == index) {
             if (vector->list[idx] != NULL) {
-                freeNULL(vector->list[idx]);
+                vector->freeElement(vector->list[idx]);
+                //freeNULL(vector->list[idx]);
             }
             vector->list[idx] = NULL;
         } else if (idx > index){
@@ -62,10 +68,11 @@ void Vector_remove(Vector* vector, int index) {
 void Vector_clear(Vector* vector) {
     if (vector->list == NULL)
         return;
-    for (int idx=0; vector->list[idx] != NULL; idx++) {
+    for (int idx=0; idx<Vector_count(vector); idx++) {
         if (vector->list[idx] != NULL) {
-            freeNULL(vector->list[idx]);
+            vector->freeElement(vector->list[idx]);
         }
+        //freeNULL(vector->list[idx]);
     }
     vector->list = realloc(vector->list, sizeof(void*));
     vector->list[0] = NULL;

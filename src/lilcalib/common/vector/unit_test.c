@@ -6,6 +6,16 @@ typedef struct {
     char* str;
 }AClass;
 
+void AClass_free(void* ele) {
+    AClass* tar = (AClass*)ele;
+    freeNULL(tar->str);
+    freeNULL(tar);
+}
+void int_free(void* ele) {
+    int* rr = (int*) ele;
+    freeNULL(rr);
+}
+
 int main(int argc, char** argv) {
     int* ele = malloc(sizeof(int));
     *ele = 1213;
@@ -13,7 +23,7 @@ int main(int argc, char** argv) {
     *ele2 = 56;
     int* ele3 = malloc(sizeof(int));
     *ele3 = 92;
-    Vector* v = Vector_new();
+    Vector* v = Vector_new(int_free);
 //    int a = 6;
 //    Vector_add(v, &a);
     Vector_add(v, ele);

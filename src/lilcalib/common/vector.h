@@ -15,13 +15,14 @@
 */
 typedef struct {
     void** list;
+    void (*freeElement)(void* element);
 } Vector;
 
 /**
  * 可変回列のコンストラクタ
  * @return Vector* 可変配列のインスタンス
  */
-Vector* Vector_new();
+Vector* Vector_new(void (*freeElement)(void* element));
 /**
  * 可変配列の解放
  * @param[in] vector Vector型のポインタ
