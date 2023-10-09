@@ -29,21 +29,16 @@ int main(int argc, char** argv) {
     Vector_add(v, ele);
     Vector_add(v, ele2);
     Vector_add(v, ele2);
-//    Vector_remove(v, 4);
+//    Vector_remove(v, 0);
     for (int idx=0; idx<Vector_count(v); idx++) {
         printf("%d\n", *Vector_get(v, idx, int));
     }
     Vector_print(v);
-    printf("@0\n");
     Vector_clear(v);
-    printf("@1\n");
     for (int idx=0; idx<Vector_count(v); idx++) {
-//        printf("%d\n", *Vector_get(v, idx, int));
+        printf("%d\n", *Vector_get(v, idx, int));
     }
-    printf("@2\n");
     Vector_print(v);
-    printf("@3\n");
     Vector_free(v);
-    printf("@4\n");
     return 0;
 }
