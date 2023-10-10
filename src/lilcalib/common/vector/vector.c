@@ -40,7 +40,8 @@ void Vector_add(Vector* vector, void* ele) {
     }
     int len = Vector_count(vector);
     vector->list = realloc(vector->list, sizeof(void*) * (len +1/*終端子分*/ +1/*追加分*/));
-    vector->list[len] = ele;
+    vector->list[len] = malloc(sizeof(ele));
+    memcpy(vector->list[len], ele, sizeof(ele));
     vector->list[len+1] = NULL;
     return;
 }
@@ -51,18 +52,17 @@ void Vector_remove(Vector* vector, int index) {
     if (len < index)
         return;
     // Remove
-    for (int idx=0; idx<Vector_count(vector); idx++) {
+    for (int idx=index; idx<Vector_count(vector); idx++) {
         if (idx == index) {
             if (vector->list[idx] != NULL) {
                 vector->freeElement(vector->list[idx]);
                 //freeNULL(vector->list[idx]);
             }
-            vector->list[idx] = NULL;
-        } else if (idx > index){
-            vector->list[idx] = vector->list[idx+1];
         }
+        vector->list[idx] = vector->list[idx+1];
     }
     vector->list = realloc(vector->list, sizeof(void*) * (len +1/*終端子分*/ -1/*削除分*/));
+    vector->list[len+1] = NULL;
     return;
 }
 void Vector_clear(Vector* vector) {
