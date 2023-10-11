@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "lilcalib/common.h"
-#include "console.h"
+#include "lilcalib/console.h"
 #include "console_window.h"
 
 int main()

@@ -10,8 +10,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../common.h"
-#include "console.h"
+#include "lilcalib/common.h"
+#include "lilcalib/console.h"
 #include "cw_frame.h"
 #include "cw_field.h"
 

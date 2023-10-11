@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-#include "console.h"
+#include "lilcalib/console.h"
 
 /**
  * コンソールウィンドウのフィールドタイプの列挙型
